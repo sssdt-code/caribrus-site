@@ -1,0 +1,2550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CaribRus - Dominican Republic Residency Platform</title>
+<meta name="description" content="Dominican Republic residency platform for clients from the USA, Canada, Europe, Russia and CIS: program comparison, document strategy, timelines, cost estimates, and guided support.">
+<meta name="keywords" content="Dominican Republic residency, Dominican residency visa, investor residency Dominican Republic, pensioner residency Dominican Republic, residency platform, Caribbean residency, Dominican Republic immigration support">
+<link rel="canonical" href="https://caribrus.com/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "CaribRus",
+  "description": "Dominican Republic residency platform for international families, entrepreneurs, investors, retirees, and real estate partners.",
+  "areaServed": ["United States", "Canada", "Europe", "Russia", "Dominican Republic"],
+  "serviceType": ["Dominican Republic residency advisory", "Investor residency coordination", "Pensioner residency support", "Family residency planning", "Document preparation"],
+  "url": "https://caribrus.com/"
+}
+</script>
+<style>
+:root {
+  --ink: #132026;
+  --muted: #5f6d73;
+  --paper: #fbfaf6;
+  --sand: #f1eadc;
+  --sea: #087e8b;
+  --reef: #ff6b4a;
+  --leaf: #2f7d5c;
+  --night: #0f2f38;
+  --line: rgba(19, 32, 38, 0.14);
+  --shadow: 0 24px 60px rgba(15, 47, 56, 0.14);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.55;
+}
+
+a { color: inherit; text-decoration: none; }
+img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 18px clamp(18px, 4vw, 56px);
+  color: #fff;
+  background: rgba(7, 29, 35, 0.76);
+  backdrop-filter: blur(12px);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: #fff;
+  color: var(--sea);
+  font-weight: 900;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  font-size: 14px;
+  font-weight: 650;
+}
+
+.nav a { opacity: 0.9; }
+.nav a:hover { opacity: 1; }
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.language-switcher {
+  display: inline-flex;
+  align-items: center;
+  min-height: 46px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.language-toggle {
+  min-height: 46px;
+  padding: 0 11px;
+  border: 0;
+  color: #fff;
+  background: transparent;
+  font: inherit;
+  font-weight: 850;
+  cursor: pointer;
+}
+
+.language-toggle.is-active {
+  color: var(--ink);
+  background: #fff;
+}
+
+.nav-cta,
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 12px 18px;
+  border: 0;
+  border-radius: 8px;
+  font: inherit;
+  font-weight: 780;
+  cursor: pointer;
+  transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+}
+
+.nav-cta {
+  color: var(--ink);
+  background: #fff;
+}
+
+.button.primary {
+  color: #fff;
+  background: var(--reef);
+  box-shadow: 0 14px 34px rgba(255, 107, 74, 0.28);
+}
+
+.button.secondary {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  backdrop-filter: blur(8px);
+}
+
+.estimate-whatsapp {
+  width: 100%;
+  margin-top: 16px;
+  color: #fff;
+  background: var(--leaf);
+  box-shadow: 0 14px 34px rgba(38, 150, 112, 0.24);
+}
+
+.button:hover,
+.nav-cta:hover {
+  transform: translateY(-1px);
+}
+
+.hero {
+  position: relative;
+  min-height: 92vh;
+  display: grid;
+  align-items: end;
+  padding: 120px clamp(18px, 5vw, 72px) 54px;
+  color: #fff;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, rgba(7, 29, 35, 0.82) 0%, rgba(7, 29, 35, 0.58) 46%, rgba(7, 29, 35, 0.18) 100%),
+    url("assets/photos/dominican-pier-hero.jpg") center/cover;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 140px;
+  background: linear-gradient(180deg, rgba(251, 250, 246, 0), var(--paper));
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 880px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 18px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 780;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.eyebrow::before {
+  content: "";
+  width: 34px;
+  height: 2px;
+  background: var(--reef);
+}
+
+h1,
+h2,
+h3,
+p { margin-top: 0; }
+
+h1 {
+  max-width: 780px;
+  margin-bottom: 22px;
+  font-size: clamp(42px, 7vw, 82px);
+  line-height: 0.97;
+  letter-spacing: 0;
+}
+
+html[lang="ru"] h1,
+html[lang="es"] h1 {
+  max-width: 860px;
+  font-size: clamp(38px, 5.7vw, 70px);
+  line-height: 1.02;
+}
+
+html[lang="ru"] .nav,
+html[lang="es"] .nav {
+  gap: 18px;
+}
+
+.hero p {
+  max-width: 680px;
+  margin-bottom: 30px;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: clamp(18px, 2vw, 22px);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.hero-proof {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(120px, 1fr));
+  gap: 1px;
+  width: min(920px, 100%);
+  margin-top: 58px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(12px);
+}
+
+.proof-item {
+  min-height: 94px;
+  padding: 18px;
+  background: rgba(15, 47, 56, 0.34);
+}
+
+.proof-item strong {
+  display: block;
+  font-size: 22px;
+  line-height: 1.1;
+}
+
+.proof-item span {
+  display: block;
+  margin-top: 6px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 13px;
+}
+
+.section {
+  scroll-margin-top: 92px;
+  padding: clamp(64px, 8vw, 112px) clamp(18px, 5vw, 72px);
+}
+
+.section-inner {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+}
+
+.section-kicker {
+  margin-bottom: 10px;
+  color: var(--sea);
+  font-size: 13px;
+  font-weight: 820;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.section-head {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(280px, 0.65fr);
+  gap: 36px;
+  align-items: end;
+  margin-bottom: 34px;
+}
+
+h2 {
+  margin-bottom: 0;
+  font-size: clamp(32px, 4vw, 52px);
+  line-height: 1.03;
+  letter-spacing: 0;
+}
+
+.section-head p,
+.lead {
+  color: var(--muted);
+  font-size: 17px;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  gap: clamp(28px, 5vw, 68px);
+  align-items: center;
+}
+
+.photo-panel {
+  min-height: 580px;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.stack {
+  display: grid;
+  gap: 16px;
+}
+
+.service-row {
+  display: grid;
+  grid-template-columns: 58px minmax(0, 1fr);
+  gap: 18px;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.service-row:first-child { border-top: 1px solid var(--line); }
+.service-num {
+  color: var(--reef);
+  font-weight: 850;
+}
+
+.service-row h3 {
+  margin-bottom: 6px;
+  font-size: 22px;
+}
+
+.service-row p { color: var(--muted); }
+
+.service-cards {
+  margin-top: 54px;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.service-card {
+  min-height: 250px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 18px 45px rgba(15, 47, 56, 0.08);
+}
+
+.service-card .tag {
+  display: inline-flex;
+  margin-bottom: 34px;
+  color: var(--sea);
+  font-size: 12px;
+  font-weight: 850;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.service-card h3 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  line-height: 1.08;
+}
+
+.service-card p {
+  margin-bottom: 18px;
+  color: var(--muted);
+}
+
+.service-card ul,
+.scenario-card ul,
+.footer-links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.service-card li {
+  padding: 8px 0;
+  border-top: 1px solid rgba(19, 32, 38, 0.09);
+  color: #33444b;
+  font-size: 14px;
+  font-weight: 650;
+}
+
+.programs {
+  background: #fff;
+}
+
+.comparison-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+}
+
+.comparison-table {
+  width: 100%;
+  min-width: 820px;
+  border-collapse: collapse;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 18px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+
+.comparison-table th {
+  color: var(--night);
+  background: #fff;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.comparison-table tr:last-child td {
+  border-bottom: 0;
+}
+
+.comparison-table strong {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.comparison-table span {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.platform {
+  background: var(--sand);
+}
+
+.calculator-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1fr);
+  gap: 20px;
+  align-items: stretch;
+}
+
+.calculator-panel,
+.result-panel,
+.portal-panel {
+  padding: 24px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+
+.calculator-panel h3,
+.result-panel h3,
+.portal-panel h3 {
+  margin-bottom: 10px;
+  font-size: 26px;
+}
+
+.result-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 18px 0;
+}
+
+.result-box {
+  padding: 16px;
+  border-radius: 8px;
+  background: #f7fbfb;
+}
+
+.result-box span {
+  display: block;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.result-box strong {
+  display: block;
+  margin-top: 4px;
+  font-size: 24px;
+  line-height: 1.1;
+}
+
+.result-note {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.floating-whatsapp {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 40;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 12px 18px;
+  border-radius: 999px;
+  color: #fff;
+  background: #1fa463;
+  font-size: 15px;
+  font-weight: 820;
+  box-shadow: 0 18px 40px rgba(31, 164, 99, 0.34);
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.floating-whatsapp:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 22px 48px rgba(31, 164, 99, 0.42);
+}
+
+.portal-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.portal-list {
+  display: grid;
+  gap: 10px;
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.portal-list li {
+  padding: 12px 14px;
+  border-left: 4px solid var(--reef);
+  background: #f7fbfb;
+  font-weight: 700;
+}
+
+.portal-screen {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #0f2f38;
+  color: #fff;
+}
+
+.portal-topbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 14px 16px;
+  background: rgba(255, 255, 255, 0.08);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.portal-body {
+  display: grid;
+  gap: 12px;
+  padding: 16px;
+}
+
+.portal-task {
+  padding: 14px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.portal-task strong,
+.portal-task span {
+  display: block;
+}
+
+.portal-task span {
+  margin-top: 4px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 13px;
+}
+
+.progress-line {
+  height: 8px;
+  overflow: hidden;
+  border-radius: 99px;
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.progress-line span {
+  display: block;
+  width: 58%;
+  height: 100%;
+  background: var(--reef);
+}
+
+.audiences {
+  background: var(--night);
+  color: #fff;
+}
+
+.audiences .section-kicker { color: #71d6c9; }
+.audiences .section-head p { color: rgba(255, 255, 255, 0.72); }
+
+.audiences .card-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.card {
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+
+.audience-card {
+  position: relative;
+  color: #fff;
+  background: #0f2f38;
+}
+
+.audience-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(15, 47, 56, 0.08), rgba(15, 47, 56, 0.9));
+  z-index: 1;
+}
+
+.audience-card img {
+  position: absolute;
+  inset: 0;
+}
+
+.card-body {
+  position: relative;
+  z-index: 2;
+  padding: 24px;
+}
+
+.card-body h3 {
+  margin-bottom: 10px;
+  font-size: 25px;
+  line-height: 1.1;
+}
+
+.card-body p {
+  margin-bottom: 0;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.process {
+  background: #fff;
+}
+
+.timeline {
+  position: relative;
+  display: grid;
+  gap: 18px;
+  counter-reset: step;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 30px;
+  bottom: 30px;
+  left: 25px;
+  width: 2px;
+  background: linear-gradient(180deg, var(--reef), var(--sea));
+}
+
+.timeline-step {
+  position: relative;
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr);
+  gap: 22px;
+  align-items: start;
+}
+
+.timeline-marker {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 8px;
+  color: #fff;
+  background: var(--night);
+  box-shadow: 0 12px 24px rgba(15, 47, 56, 0.18);
+  font-weight: 850;
+}
+
+.timeline-card {
+  min-height: 144px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+}
+
+.timeline-card::before {
+  counter-increment: step;
+  content: "Step " counter(step);
+  display: inline-flex;
+  margin-bottom: 12px;
+  color: var(--reef);
+  font-size: 12px;
+  font-weight: 850;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.timeline-card h3 {
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.timeline-card p {
+  color: var(--muted);
+}
+
+.scenarios {
+  background: var(--paper);
+}
+
+.scenario-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.scenario-card {
+  min-height: 300px;
+  padding: 24px;
+  border-radius: 8px;
+  color: #fff;
+  background: var(--night);
+  box-shadow: var(--shadow);
+}
+
+.scenario-card:nth-child(2) { background: var(--sea); }
+.scenario-card:nth-child(3) { background: var(--leaf); }
+.scenario-card:nth-child(4) { background: #26383e; }
+
+.scenario-card img {
+  display: block;
+  width: calc(100% + 48px);
+  height: 138px;
+  margin: -24px -24px 18px;
+  border-radius: 8px 8px 0 0;
+  object-fit: cover;
+  object-position: center 58%;
+}
+
+.rating {
+  display: flex;
+  gap: 3px;
+  margin-bottom: 28px;
+  color: #ffd166;
+  font-size: 18px;
+  letter-spacing: 0;
+}
+
+.scenario-card h3 {
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+.scenario-card p {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.scenario-card li {
+  padding: 8px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 14px;
+  font-weight: 650;
+}
+
+.faq {
+  background: #fff;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+details {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+}
+
+summary {
+  position: relative;
+  list-style: none;
+  padding: 18px 46px 18px 18px;
+  cursor: pointer;
+  font-weight: 780;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary::after {
+  content: "+";
+  position: absolute;
+  right: 18px;
+  top: 16px;
+  color: var(--sea);
+  font-size: 24px;
+  line-height: 1;
+}
+
+details[open] summary::after {
+  content: "-";
+}
+
+details p {
+  margin: 0;
+  padding: 0 18px 18px;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.partners {
+  background: var(--sand);
+}
+
+.partner-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.72fr);
+  gap: 28px;
+  align-items: stretch;
+}
+
+.partner-copy {
+  padding: clamp(28px, 5vw, 52px);
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+
+.partner-copy p {
+  color: var(--muted);
+  font-size: 17px;
+}
+
+.partner-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 26px;
+}
+
+.partner-list div {
+  padding: 14px 16px;
+  border-left: 4px solid var(--sea);
+  background: #f7fbfb;
+  font-weight: 700;
+}
+
+.partner-photo {
+  min-height: 420px;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.contact {
+  color: #fff;
+  background:
+    linear-gradient(90deg, rgba(15, 47, 56, 0.92), rgba(15, 47, 56, 0.74)),
+    url("assets/photos/dominican-beach-palms.jpg") center/cover;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.88fr) minmax(340px, 0.66fr);
+  gap: clamp(26px, 5vw, 64px);
+  align-items: start;
+}
+
+.contact .section-kicker { color: #8ee1d7; }
+.contact .lead { color: rgba(255, 255, 255, 0.78); }
+
+.contact-points {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.contact-point {
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.contact-point strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.contact-point span {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+}
+
+.contact-methods {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.contact-method {
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.contact-method strong,
+.contact-method span {
+  display: block;
+}
+
+.contact-method span {
+  margin-top: 4px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 14px;
+}
+
+.map-placeholder {
+  min-height: 180px;
+  display: grid;
+  place-items: center;
+  margin-top: 14px;
+  padding: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.04)),
+    repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.08) 0 1px, transparent 1px 18px);
+  color: rgba(255, 255, 255, 0.82);
+  text-align: center;
+  font-weight: 750;
+}
+
+.form-shell {
+  padding: 24px;
+  border-radius: 8px;
+  background: #fff;
+  color: var(--ink);
+  box-shadow: var(--shadow);
+}
+
+.form-shell h3 {
+  margin-bottom: 8px;
+  font-size: 26px;
+}
+
+.form-shell p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.field {
+  display: grid;
+  gap: 6px;
+  margin-top: 14px;
+}
+
+label {
+  color: #33444b;
+  font-size: 13px;
+  font-weight: 760;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  min-height: 46px;
+  padding: 12px 13px;
+  border: 1px solid #d8e0e2;
+  border-radius: 8px;
+  color: var(--ink);
+  background: #fff;
+  font: inherit;
+}
+
+textarea {
+  min-height: 104px;
+  resize: vertical;
+}
+
+.form-shell .button {
+  width: 100%;
+  margin-top: 18px;
+}
+
+.form-note {
+  min-height: 22px;
+  margin-top: 12px;
+  color: var(--leaf);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.site-footer {
+  scroll-margin-top: 92px;
+  padding: 54px clamp(18px, 5vw, 72px) 28px;
+  color: #d8e7ea;
+  background: #09242b;
+  font-size: 14px;
+}
+
+.site-footer a { color: #fff; }
+
+.footer-inner {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: minmax(240px, 1.3fr) repeat(3, minmax(150px, 0.7fr));
+  gap: 34px;
+  padding-bottom: 34px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.footer-brand {
+  max-width: 360px;
+}
+
+.footer-brand .brand {
+  margin-bottom: 14px;
+}
+
+.footer-brand p {
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.footer-title {
+  margin-bottom: 14px;
+  color: #fff;
+  font-weight: 850;
+}
+
+.footer-links {
+  display: grid;
+  gap: 9px;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  padding-top: 22px;
+  color: rgba(255, 255, 255, 0.62);
+}
+
+@media (max-width: 980px) {
+  .nav { display: none; }
+  .hero { min-height: 88vh; }
+  .hero-proof,
+  .card-grid,
+  .service-grid,
+  .scenario-grid,
+  .faq-grid,
+  .contact-points {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .audiences .card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .section-head,
+  .split,
+  .calculator-grid,
+  .portal-grid,
+  .partner-panel,
+  .contact-grid,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+  .photo-panel,
+  .partner-photo {
+    min-height: 380px;
+  }
+}
+
+@media (max-width: 620px) {
+  .site-header {
+    padding-top: 12px;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+  .hero {
+    min-height: auto;
+    padding-top: 126px;
+    padding-bottom: 48px;
+    background:
+      linear-gradient(90deg, rgba(7, 29, 35, 0.86) 0%, rgba(7, 29, 35, 0.64) 100%),
+      url("assets/photos/dominican-beach-palms.jpg") center/cover;
+  }
+  h1 {
+    font-size: clamp(36px, 10vw, 44px);
+    line-height: 1.03;
+  }
+  html[lang="ru"] h1,
+  html[lang="es"] h1 {
+    font-size: clamp(34px, 9.5vw, 42px);
+    line-height: 1.04;
+  }
+  .hero p {
+    font-size: 17px;
+    line-height: 1.55;
+  }
+  .hero-proof {
+    display: none;
+  }
+  .split .photo-panel {
+    order: 2;
+  }
+  .split > div:not(.photo-panel) {
+    order: 1;
+  }
+  .hero-actions,
+  .site-footer {
+    flex-direction: column;
+  }
+  .button,
+  .nav-cta {
+    width: 100%;
+  }
+  .floating-whatsapp {
+    right: 14px;
+    bottom: 14px;
+    min-height: 46px;
+    padding: 11px 14px;
+    font-size: 14px;
+  }
+  .site-header .nav-cta {
+    width: auto;
+    min-height: 42px;
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+  .header-actions {
+    gap: 8px;
+  }
+  .language-switcher,
+  .language-toggle {
+    min-height: 42px;
+  }
+  .language-toggle {
+    padding: 0 8px;
+    font-size: 13px;
+  }
+  .hero-proof,
+  .card-grid,
+  .audiences .card-grid,
+  .service-grid,
+  .scenario-grid,
+  .faq-grid,
+  .contact-points,
+  .contact-methods,
+  .calculator-grid,
+  .portal-grid,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+  .proof-item {
+    min-height: 78px;
+  }
+  .service-row {
+    grid-template-columns: 42px minmax(0, 1fr);
+  }
+  .timeline-step {
+    grid-template-columns: 42px minmax(0, 1fr);
+    gap: 14px;
+  }
+  .timeline::before {
+    left: 20px;
+  }
+  .timeline-marker {
+    width: 42px;
+    height: 42px;
+    font-size: 13px;
+  }
+  .timeline-card {
+    padding: 20px;
+  }
+  .footer-bottom {
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+
+<body>
+<header class="site-header">
+  <a class="brand" href="#top" aria-label="CaribRus home">
+    <span class="brand-mark">CR</span>
+    <span>CaribRus</span>
+  </a>
+  <nav class="nav" aria-label="Main navigation">
+    <a href="#services">Services</a>
+    <a href="#programs">Programs</a>
+    <a href="#platform">Calculator</a>
+    <a href="#clients">Clients</a>
+    <a href="#process">Process</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+  <div class="header-actions">
+    <div class="language-switcher" aria-label="Language switcher">
+      <button class="language-toggle is-active" type="button" data-lang-option="en">EN</button>
+      <button class="language-toggle" type="button" data-lang-option="es">ES</button>
+      <button class="language-toggle" type="button" data-lang-option="ru">RU</button>
+    </div>
+    <a class="nav-cta" href="#contact">Book a Call</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="hero-content">
+      <div class="eyebrow">Dominican Republic Residency Advisory</div>
+      <h1>A clearer platform for Dominican Republic residency.</h1>
+      <p>CaribRus gives clients from the USA, Canada, Europe, Russia and CIS a transparent way to compare residency paths, estimate timing, prepare documents, and move through the process with a team on the ground.</p>
+      <div class="hero-actions">
+        <a class="button primary" href="#contact">Start Residency Review</a>
+        <a class="button secondary" href="#clients">Choose Your Path</a>
+      </div>
+    </div>
+    <div class="hero-proof" aria-label="Key service points">
+      <div class="proof-item"><strong>USA</strong><span>Plan B residency, lifestyle, family mobility</span></div>
+      <div class="proof-item"><strong>Canada</strong><span>Retirement, relocation, international planning</span></div>
+      <div class="proof-item"><strong>Europe</strong><span>Flexible Caribbean base and relocation context</span></div>
+      <div class="proof-item"><strong>Russia/CIS</strong><span>Second jurisdiction and family security</span></div>
+      <div class="proof-item"><strong>B2B</strong><span>Real estate agents and relocation partners</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="services">
+    <div class="section-inner split">
+      <div class="photo-panel">
+        <img src="assets/photos/dominican-pier-seated.jpg" alt="Caribbean lifestyle in the Dominican Republic">
+      </div>
+      <div>
+        <div class="section-kicker">What We Do</div>
+        <h2>Residency is not just paperwork. It is a jurisdiction strategy.</h2>
+        <p class="lead">We turn a vague idea of "moving to the Caribbean" into a clear plan: eligibility, documents, timing, family needs, real estate context, and the next legal steps with local professionals.</p>
+        <div class="stack">
+          <div class="service-row">
+            <div class="service-num">01</div>
+            <div>
+              <h3>Residency Assessment</h3>
+              <p>We identify the most realistic route based on income, family situation, documents, timeline, and whether the goal is relocation, backup status, or eventual citizenship planning.</p>
+            </div>
+          </div>
+          <div class="service-row">
+            <div class="service-num">02</div>
+            <div>
+              <h3>Document & Application Support</h3>
+              <p>We coordinate the practical side of preparation, translation, local appointments, filing flow, and communication so the process stays organized.</p>
+            </div>
+          </div>
+          <div class="service-row">
+            <div class="service-num">03</div>
+            <div>
+              <h3>Relocation & Real Estate Context</h3>
+              <p>For clients considering a physical move or property purchase, we connect the residency plan with trusted local market guidance and partner agents.</p>
+            </div>
+          </div>
+          <div class="service-row">
+            <div class="service-num">04</div>
+            <div>
+              <h3>Long-Term Planning</h3>
+              <p>We help clients understand renewals, family inclusion, lifestyle setup, and questions to discuss with independent legal and tax advisors.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section-inner service-cards" aria-label="Residency services">
+      <div class="section-head">
+        <div>
+          <div class="section-kicker">Service Menu</div>
+          <h2>Clear programs for different residency goals.</h2>
+        </div>
+        <p>Each client path is packaged around the outcome, while advisory, document preparation, translations, and strategy are handled as part of the coordinated process.</p>
+      </div>
+      <div class="service-grid">
+        <article class="service-card">
+          <span class="tag">Core Path</span>
+          <h3>Residency Visa</h3>
+          <p>For clients who want a legal base in the Dominican Republic with a clear document route.</p>
+          <ul>
+            <li>Eligibility review</li>
+            <li>Document checklist</li>
+            <li>Application coordination</li>
+          </ul>
+        </article>
+        <article class="service-card">
+          <span class="tag">Capital Path</span>
+          <h3>Investor Residency</h3>
+          <p>For investors and property buyers who want residency aligned with a serious Dominican Republic plan.</p>
+          <ul>
+            <li>Real estate context</li>
+            <li>Partner agent flow</li>
+            <li>Local handoff support</li>
+          </ul>
+        </article>
+        <article class="service-card">
+          <span class="tag">Retirement</span>
+          <h3>Pensioner Residency</h3>
+          <p>For retirees and pension-income clients considering warmer lifestyle options and longer stays.</p>
+          <ul>
+            <li>Income profile review</li>
+            <li>Family planning</li>
+            <li>Arrival preparation</li>
+          </ul>
+        </article>
+        <article class="service-card">
+          <span class="tag">Family</span>
+          <h3>Family Reunification</h3>
+          <p>For spouses, children, and family members who need a coordinated residency file.</p>
+          <ul>
+            <li>Dependent file mapping</li>
+            <li>Document sequencing</li>
+            <li>Russian and English support</li>
+          </ul>
+        </article>
+        <article class="service-card">
+          <span class="tag">Long-Term</span>
+          <h3>Permanent Residency</h3>
+          <p>For clients who want a stable long-term position rather than a short tactical move.</p>
+          <ul>
+            <li>Renewal planning</li>
+            <li>Status tracking</li>
+            <li>Future route review</li>
+          </ul>
+        </article>
+        <article class="service-card">
+          <span class="tag">Future Route</span>
+          <h3>Citizenship Assistance</h3>
+          <p>For clients who want to understand the long-term pathway and plan responsibly from day one.</p>
+          <ul>
+            <li>Timeline orientation</li>
+            <li>Residency continuity</li>
+            <li>Legal advisor coordination</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section programs" id="programs">
+    <div class="section-inner">
+      <div class="section-head">
+        <div>
+          <div class="section-kicker">Program Comparison</div>
+          <h2>Choose the route that matches the client, not the other way around.</h2>
+        </div>
+        <p>Clients do not need another generic immigration menu. They need to understand which path fits their income, family, investment plans, timeline, and long-term goal.</p>
+      </div>
+      <div class="comparison-wrap">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Program</th>
+              <th>Best For</th>
+              <th>Typical Focus</th>
+              <th>Planning Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Residency Visa</strong><span>General route</span></td>
+              <td>Families, remote professionals, entrepreneurs</td>
+              <td>Clear residency file, document readiness, local coordination</td>
+              <td>Good starting point when the client needs a practical second base.</td>
+            </tr>
+            <tr>
+              <td><strong>Investor Residency</strong><span>Capital and real estate route</span></td>
+              <td>Property buyers, investors, business owners</td>
+              <td>Investment context, real estate timing, local partner flow</td>
+              <td>Best reviewed before committing to a property or capital plan.</td>
+            </tr>
+            <tr>
+              <td><strong>Pensioner Residency</strong><span>Retirement route</span></td>
+              <td>Retirees and pension-income clients</td>
+              <td>Income proof, family planning, lifestyle setup</td>
+              <td>Strong fit for Canadian, US, and European retirement scenarios.</td>
+            </tr>
+            <tr>
+              <td><strong>Family Residency</strong><span>Dependents and reunification</span></td>
+              <td>Spouses, children, multi-person files</td>
+              <td>Civil documents, translations, sequencing, appointments</td>
+              <td>Family documents should be checked early to avoid delays.</td>
+            </tr>
+            <tr>
+              <td><strong>Permanent Residency</strong><span>Long-term route</span></td>
+              <td>Clients planning continuity in the Dominican Republic</td>
+              <td>Renewals, status maintenance, long-term planning</td>
+              <td>Works best when residency is treated as a multi-year strategy.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section platform" id="platform">
+    <div class="section-inner">
+      <div class="section-head">
+        <div>
+          <div class="section-kicker">Platform Concept</div>
+          <h2>Estimate, prepare, track, and move forward with less uncertainty.</h2>
+        </div>
+        <p>The platform layer makes the service easier to buy: clients see a route, estimated range, document steps, and a future client cabinet instead of guessing what happens next.</p>
+      </div>
+      <div class="calculator-grid">
+        <form class="calculator-panel" id="residencyCalculator">
+          <h3>Residency Cost & Timeline Estimator</h3>
+          <p class="lead">A practical starting estimate for planning. Final pricing depends on the legal route, family file, translations, government fees, and local professional costs.</p>
+          <div class="field">
+            <label for="calcProgram">Program</label>
+            <select id="calcProgram" name="program">
+              <option value="general">Residency Visa</option>
+              <option value="investor">Investor Residency</option>
+              <option value="pensioner">Pensioner Residency</option>
+              <option value="family">Family Residency</option>
+              <option value="permanent">Permanent Residency</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="calcApplicants">Applicants</label>
+            <select id="calcApplicants" name="applicants">
+              <option value="1">1 applicant</option>
+              <option value="2">2 applicants</option>
+              <option value="3">3 applicants</option>
+              <option value="4">4 applicants</option>
+              <option value="5">5+ applicants</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="calcDocs">Document readiness</label>
+            <select id="calcDocs" name="docs">
+              <option value="ready">Mostly ready</option>
+              <option value="partial">Some documents missing</option>
+              <option value="complex">Complex multi-country file</option>
+            </select>
+          </div>
+        </form>
+        <div class="result-panel">
+          <h3>Planning Snapshot</h3>
+          <div class="result-grid">
+            <div class="result-box">
+              <span>Estimated advisory range</span>
+              <strong id="estimateCost">$1.9k-$4.2k</strong>
+            </div>
+            <div class="result-box">
+              <span>Estimated timeline</span>
+              <strong id="estimateTime">3-5 months</strong>
+            </div>
+            <div class="result-box">
+              <span>Document load</span>
+              <strong id="estimateDocs">Standard</strong>
+            </div>
+            <div class="result-box">
+              <span>Recommended next step</span>
+              <strong id="estimateStep">Review call</strong>
+            </div>
+          </div>
+          <p class="result-note">This calculator is intentionally conservative. It helps the client understand scale before a proper document review.</p>
+          <a class="button estimate-whatsapp" id="sendEstimate" href="https://wa.me/18297200513" target="_blank" rel="noopener">Send My Estimate</a>
+        </div>
+      </div>
+      <div class="portal-grid">
+        <div class="portal-panel">
+          <div class="section-kicker">Client Cabinet</div>
+          <h3>A future client account for every active file.</h3>
+          <p class="lead">The concept is simple: no scattered messages, no mystery status, no lost document checklist. The client sees what is ready, what is missing, and what happens next.</p>
+          <ul class="portal-list">
+            <li>Personal document checklist</li>
+            <li>Status tracker and next actions</li>
+            <li>Upload queue for passports and civil documents</li>
+            <li>Timeline, appointments, and renewal reminders</li>
+          </ul>
+        </div>
+        <div class="portal-screen" aria-label="Client cabinet concept preview">
+          <div class="portal-topbar">
+            <span>CaribRus Client Cabinet</span>
+            <span>Residency File 58%</span>
+          </div>
+          <div class="portal-body">
+            <div class="progress-line"><span></span></div>
+            <div class="portal-task">
+              <strong>Documents under review</strong>
+              <span>Passport copies received. Civil documents pending apostille check.</span>
+            </div>
+            <div class="portal-task">
+              <strong>Next action</strong>
+              <span>Upload police clearance and confirm family member list.</span>
+            </div>
+            <div class="portal-task">
+              <strong>Local coordination</strong>
+              <span>Dominican Republic appointment window to be confirmed after document validation.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section audiences" id="clients">
+    <div class="section-inner">
+      <div class="section-head">
+        <div>
+          <div class="section-kicker">Client Paths</div>
+          <h2>Four priority markets, one Caribbean destination.</h2>
+        </div>
+        <p>Messaging should feel different for each audience. Americans, Canadians, and Europeans often think in terms of lifestyle, mobility, retirement, and optionality. Russian-speaking clients often need a second legal base, family security, and practical relocation support.</p>
+      </div>
+      <div class="card-grid">
+        <article class="card audience-card">
+          <img src="assets/photos/dominican-couple-pool.jpg" alt="Clients enjoying a Dominican Republic lifestyle setting">
+          <div class="card-body">
+            <h3>United States</h3>
+            <p>For business owners, remote professionals, families, and retirees who want a Caribbean base outside the US system.</p>
+          </div>
+        </article>
+        <article class="card audience-card">
+          <img src="assets/photos/dominican-beach-palms.jpg" alt="Dominican Republic beach with palms">
+          <div class="card-body">
+            <h3>Canada</h3>
+            <p>For clients exploring warmer lifestyle options, retirement planning, flexible stays, and long-term family mobility.</p>
+          </div>
+        </article>
+        <article class="card audience-card">
+          <img src="assets/photos/dominican-rocky-coast.jpg" alt="Dominican Republic coastline">
+          <div class="card-body">
+            <h3>Europe</h3>
+            <p>For mobile professionals, retirees, and families who want a Caribbean residency option outside the European routine.</p>
+          </div>
+        </article>
+        <article class="card audience-card">
+          <img src="assets/photos/dominican-pier-walk.jpg" alt="Dominican Republic pier and coastline">
+          <div class="card-body">
+            <h3>Russia & CIS</h3>
+            <p>For families and entrepreneurs who need a practical second jurisdiction, relocation route, and trusted Russian-language guidance.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section process" id="process">
+    <div class="section-inner">
+      <div class="section-head">
+        <div>
+          <div class="section-kicker">How It Works</div>
+          <h2>A calm, structured process from first call to residency file.</h2>
+        </div>
+        <p>Every case is different, so we avoid generic promises. The first goal is to understand the client, confirm what is realistic, and build a clean document route.</p>
+      </div>
+      <div class="timeline">
+        <div class="timeline-step">
+          <div class="timeline-marker">01</div>
+          <div class="timeline-card">
+            <h3>Free Consultation</h3>
+            <p>We clarify the country of residence, family members, income source, urgency, travel plans, and whether real estate is part of the plan.</p>
+          </div>
+        </div>
+        <div class="timeline-step">
+          <div class="timeline-marker">02</div>
+          <div class="timeline-card">
+            <h3>Document Review</h3>
+            <p>We review what you already have, identify gaps, and map apostille, legalization, translation, or timing issues before they slow the file.</p>
+          </div>
+        </div>
+        <div class="timeline-step">
+          <div class="timeline-marker">03</div>
+          <div class="timeline-card">
+            <h3>Application Preparation</h3>
+            <p>The residency route, supporting documents, translations, forms, and local appointments are prepared in a clean sequence.</p>
+          </div>
+        </div>
+        <div class="timeline-step">
+          <div class="timeline-marker">04</div>
+          <div class="timeline-card">
+            <h3>Government Submission</h3>
+            <p>We coordinate filing flow with local professionals, keep next actions visible, and help the client understand what is happening at each step.</p>
+          </div>
+        </div>
+        <div class="timeline-step">
+          <div class="timeline-marker">05</div>
+          <div class="timeline-card">
+            <h3>Residency Approval</h3>
+            <p>Once approved, we help organize the practical handoff, renewal reminders, and what the new status means for the client and family.</p>
+          </div>
+        </div>
+        <div class="timeline-step">
+          <div class="timeline-marker">06</div>
+          <div class="timeline-card">
+            <h3>Life in the Dominican Republic</h3>
+            <p>For clients relocating or buying property, we connect the residency plan with neighborhoods, real estate partners, schools, and local setup questions.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section scenarios" id="scenarios">
+    <div class="section-inner">
+      <div class="section-head">
+        <div>
+          <div class="section-kicker">Client Scenarios</div>
+          <h2>International cases we are built to handle.</h2>
+        </div>
+        <p>Until real testimonials are collected and approved, these scenario cards communicate the kinds of clients CaribRus serves without inventing names, faces, or claims.</p>
+      </div>
+      <div class="scenario-grid">
+        <article class="scenario-card">
+          <div class="rating" aria-label="Five-star service signal">★★★★★</div>
+          <h3>US Entrepreneur</h3>
+          <p>Needs a second jurisdiction, flexible Caribbean access, and a plan that does not require immediate relocation.</p>
+          <ul>
+            <li>Business owner profile</li>
+            <li>Family optionality</li>
+            <li>Plan B residency</li>
+          </ul>
+        </article>
+        <article class="scenario-card">
+          <div class="rating" aria-label="Five-star service signal">★★★★★</div>
+          <h3>Canadian Retiree</h3>
+          <p>Explores warmer lifestyle, longer stays, property options, and a calm residency process with practical support.</p>
+          <ul>
+            <li>Pension-income review</li>
+            <li>Retirement planning</li>
+            <li>Local setup context</li>
+          </ul>
+        </article>
+        <article class="scenario-card">
+          <img src="assets/photos/dominican-family-residency.jpg" alt="Family planning residency in the Dominican Republic">
+          <div class="rating" aria-label="Five-star service signal">★★★★★</div>
+          <h3>Russian-Speaking Family</h3>
+          <p>Looks for a second legal base, family safety, document coordination, and a Russian-language guide through the process.</p>
+          <ul>
+            <li>Family documents</li>
+            <li>Relocation route</li>
+            <li>Bilingual support</li>
+          </ul>
+        </article>
+        <article class="scenario-card">
+          <div class="rating" aria-label="Five-star service signal">★★★★★</div>
+          <h3>Property Buyer</h3>
+          <p>Wants residency questions answered while evaluating Dominican Republic real estate and local living options.</p>
+          <ul>
+            <li>Buyer pre-screening</li>
+            <li>Agent collaboration</li>
+            <li>Residency plus lifestyle</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section partners" id="partners">
+    <div class="section-inner partner-panel">
+      <div class="partner-copy">
+        <div class="section-kicker">Real Estate Partners</div>
+        <h2>Built to work with agencies and individual realtors.</h2>
+        <p>Residency often appears at the exact moment a client starts asking about property, schools, banking, neighborhoods, and whether the Dominican Republic can become more than a vacation destination. CaribRus can support that conversation without replacing the realtor.</p>
+        <div class="partner-list">
+          <div>Residency pre-screening for buyer leads</div>
+          <div>Referral flow for agents working with foreign clients</div>
+          <div>English and Russian-language client support</div>
+          <div>Relocation context that helps serious buyers move forward</div>
+        </div>
+      </div>
+      <div class="partner-photo">
+        <img src="assets/photos/dominican-pool-property.jpg" alt="Dominican Republic poolside property setting">
+      </div>
+    </div>
+  </section>
+
+  <section class="section faq" id="faq">
+    <div class="section-inner">
+      <div class="section-head">
+        <div>
+          <div class="section-kicker">FAQ</div>
+          <h2>Questions clients usually ask before starting.</h2>
+        </div>
+        <p>These answers are general orientation. Exact requirements, timelines, and legal consequences should be confirmed for each client profile before filing.</p>
+      </div>
+      <div class="faq-grid">
+        <details>
+          <summary>Who is Dominican Republic residency suitable for?</summary>
+          <p>It can be suitable for families, entrepreneurs, investors, retirees, remote professionals, and property buyers who want a legal Caribbean base or relocation option.</p>
+        </details>
+        <details>
+          <summary>Do I need to move permanently to apply?</summary>
+          <p>Not every client is planning immediate relocation. The right strategy depends on the residency category, travel plans, renewal requirements, and long-term goals.</p>
+        </details>
+        <details>
+          <summary>Can my family be included?</summary>
+          <p>Family inclusion is often part of the planning conversation. We review spouse and child documents early so the file is structured correctly from the beginning.</p>
+        </details>
+        <details>
+          <summary>Which residency category should I choose?</summary>
+          <p>The category depends on income source, investment plans, family profile, documents, and whether the goal is relocation, backup residency, retirement, or real estate planning.</p>
+        </details>
+        <details>
+          <summary>Can property purchase help my case?</summary>
+          <p>Real estate can be relevant for some clients, especially investors and buyers planning a long-term Dominican Republic base. The legal fit should be confirmed before purchase decisions.</p>
+        </details>
+        <details>
+          <summary>Do pensioners have a separate path?</summary>
+          <p>Retirees and pension-income clients may have a distinct planning route. We review proof of income, documents, family needs, and timing before recommending next steps.</p>
+        </details>
+        <details>
+          <summary>How long does the process take?</summary>
+          <p>Timing depends on document readiness, translations, local appointments, government processing, and the client profile. We build a realistic sequence after the document review.</p>
+        </details>
+        <details>
+          <summary>What documents are usually needed?</summary>
+          <p>Common items may include passports, civil status documents, police clearance, proof of income or investment, photos, medical steps, translations, and legalized or apostilled records.</p>
+        </details>
+        <details>
+          <summary>Do documents need translation?</summary>
+          <p>Many foreign documents require translation and proper formatting. We help clients identify what needs translation and how to sequence it with legalization or apostille steps.</p>
+        </details>
+        <details>
+          <summary>Do I need apostilles?</summary>
+          <p>Some documents may need apostille or legalization depending on the issuing country and document type. This is one of the first items checked in document review.</p>
+        </details>
+        <details>
+          <summary>Can you help Russian-speaking clients?</summary>
+          <p>Yes. CaribRus is designed for English and Russian-speaking clients who need practical guidance, clear communication, and support with document flow.</p>
+        </details>
+        <details>
+          <summary>Can you help US and Canadian clients?</summary>
+          <p>Yes. The positioning for US and Canadian clients often focuses on lifestyle, retirement, mobility, family planning, real estate, and second jurisdiction optionality.</p>
+        </details>
+        <details>
+          <summary>Is this tax advice?</summary>
+          <p>No. Residency planning can affect tax questions, but tax advice should come from a qualified tax professional who understands the client's full situation.</p>
+        </details>
+        <details>
+          <summary>Is this legal advice?</summary>
+          <p>The website provides advisory and coordination information. Specific legal advice and filing decisions should be confirmed with qualified local legal professionals.</p>
+        </details>
+        <details>
+          <summary>Can residency lead to citizenship?</summary>
+          <p>Some clients plan with a long-term citizenship route in mind. The pathway depends on eligibility, continuity, legal requirements, and future personal circumstances.</p>
+        </details>
+        <details>
+          <summary>What happens after approval?</summary>
+          <p>After approval, clients usually need to understand status maintenance, renewals, local practical setup, and future planning around family, property, and travel.</p>
+        </details>
+        <details>
+          <summary>Can you work with real estate agents?</summary>
+          <p>Yes. CaribRus can support agents and agencies by pre-screening buyer leads, explaining residency context, and helping foreign clients move forward confidently.</p>
+        </details>
+        <details>
+          <summary>Can I start before choosing a property?</summary>
+          <p>Yes. Many clients should understand residency options before buying property so their real estate search, timeline, and legal planning work together.</p>
+        </details>
+        <details>
+          <summary>What if my case is urgent?</summary>
+          <p>Urgent cases require a fast document audit. We identify blockers first, then decide whether a realistic accelerated sequence exists.</p>
+        </details>
+        <details>
+          <summary>How do I start?</summary>
+          <p>Submit the residency review form with your country, goal, family profile, and timeline. We will respond with the next practical step.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact" id="contact">
+    <div class="section-inner contact-grid">
+      <div>
+        <div class="section-kicker">Start Here</div>
+        <h2>Tell us who the residency plan is for.</h2>
+        <p class="lead">Use the form for a first review. We will respond with the next practical step and, if useful, a short list of documents to prepare before the call.</p>
+        <div class="contact-points">
+          <div class="contact-point"><strong>For individuals</strong><span>Family, investment, relocation, backup residency</span></div>
+          <div class="contact-point"><strong>For agents</strong><span>Buyer support, referrals, co-branded client flow</span></div>
+          <div class="contact-point"><strong>Languages</strong><span>English and Russian client communication</span></div>
+          <div class="contact-point"><strong>Scope</strong><span>Advisory and coordination with local professionals</span></div>
+        </div>
+        <div class="contact-methods" aria-label="Contact methods">
+          <a class="contact-method" href="tel:+18297200513">
+            <strong>Phone</strong>
+            <span>+1 829 720 0513</span>
+          </a>
+          <a class="contact-method" href="https://wa.me/18297200513" target="_blank" rel="noopener">
+            <strong>WhatsApp</strong>
+            <span>+1 829 720 0513</span>
+          </a>
+          <a class="contact-method" href="https://t.me/+18297200513" target="_blank" rel="noopener">
+            <strong>Telegram</strong>
+            <span>+1 829 720 0513</span>
+          </a>
+          <a class="contact-method" href="mailto:caribrus@list.ru">
+            <strong>Email</strong>
+            <span>caribrus@list.ru</span>
+          </a>
+        </div>
+        <div class="map-placeholder">
+          Dominican Republic service area<br>
+          Local appointments and partner meetings by arrangement
+        </div>
+      </div>
+      <form class="form-shell" id="leadForm">
+        <h3>Residency Review</h3>
+        <p>This is an initial request, not legal or tax advice.</p>
+        <div class="field">
+          <label for="name">Full name</label>
+          <input id="name" name="name" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required>
+        </div>
+        <div class="field">
+          <label for="country">Current country</label>
+          <select id="country" name="country" required>
+            <option value="">Select one</option>
+            <option>United States</option>
+            <option>Canada</option>
+            <option>Russia / CIS</option>
+            <option>Europe</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="goal">Main goal</label>
+          <select id="goal" name="goal" required>
+            <option value="">Select one</option>
+            <option>Residency as a backup plan</option>
+            <option>Relocation to the Dominican Republic</option>
+            <option>Family residency</option>
+            <option>Real estate and residency</option>
+            <option>Agency / realtor partnership</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="message">Short note</label>
+          <textarea id="message" name="message" placeholder="Family size, timeline, property plans, or partnership idea"></textarea>
+        </div>
+        <button class="button primary" type="submit">Request Consultation</button>
+        <div class="form-note" id="formNote" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<a class="floating-whatsapp" href="https://wa.me/18297200513" target="_blank" rel="noopener" aria-label="Open WhatsApp chat">WhatsApp</a>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="#top" aria-label="CaribRus home">
+          <span class="brand-mark">CR</span>
+          <span>CaribRus</span>
+        </a>
+        <p>Dominican Republic residency advisory for international families, entrepreneurs, investors, and real estate partners.</p>
+      </div>
+      <div>
+        <div class="footer-title">Services</div>
+        <ul class="footer-links">
+          <li><a href="#services">Residency Visa</a></li>
+          <li><a href="#services">Investor Residency</a></li>
+          <li><a href="#services">Pensioner Residency</a></li>
+          <li><a href="#programs">Program Comparison</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-title">Company</div>
+        <ul class="footer-links">
+          <li><a href="#clients">Client Paths</a></li>
+          <li><a href="#platform">Calculator</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-title">Contact</div>
+        <ul class="footer-links">
+          <li><a href="#contact">Book Consultation</a></li>
+          <li><a href="tel:+18297200513">Phone</a></li>
+          <li><a href="https://wa.me/18297200513" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="https://t.me/+18297200513" target="_blank" rel="noopener">Telegram</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 CaribRus - Dominican Republic Residency Platform</span>
+      <span><a href="#">Privacy Policy</a> · <a href="#">Terms</a> · <a href="#">Legal Disclaimer</a> · <a href="ru.html">Russian</a> / <a href="en.html">English</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const endpoint = "https://script.google.com/macros/s/AKfycbxQYevxZ2rJ-dlI6xZowS4FIhc8KiWCSacoVeGp_ckTGVLo61G0nkPYlQndpJJzOWl-lg/exec";
+
+const ruText = {
+  "Services": "Услуги",
+  "Programs": "Программы",
+  "Calculator": "Калькулятор",
+  "Clients": "Клиенты",
+  "Process": "Процесс",
+  "FAQ": "FAQ",
+  "Book a Call": "Связаться",
+  "Dominican Republic Residency Advisory": "Резиденция в Доминиканской Республике",
+  "A clearer platform for Dominican Republic residency.": "Понятная платформа для оформления резиденции Доминиканской Республики.",
+  "CaribRus gives clients from the USA, Canada, Europe, Russia and CIS a transparent way to compare residency paths, estimate timing, prepare documents, and move through the process with a team on the ground.": "CaribRus помогает клиентам из США, Канады, Европы, России и СНГ сравнить программы резиденции, оценить сроки, подготовить документы и пройти процесс с командой на месте.",
+  "Start Residency Review": "Проверить резиденцию",
+  "Choose Your Path": "Выбрать маршрут",
+  "Plan B residency, lifestyle, family mobility": "План Б, образ жизни, мобильность семьи",
+  "Retirement, relocation, international planning": "Пенсия, переезд, международное планирование",
+  "Flexible Caribbean base and relocation context": "Гибкая карибская база и сценарий переезда",
+  "Second jurisdiction and family security": "Вторая юрисдикция и безопасность семьи",
+  "Real estate agents and relocation partners": "Риэлторы и партнёры по релокации",
+  "What We Do": "Что мы делаем",
+  "Residency is not just paperwork. It is a jurisdiction strategy.": "Резиденция — это не просто документы. Это стратегия второй юрисдикции.",
+  "We turn a vague idea of \"moving to the Caribbean\" into a clear plan: eligibility, documents, timing, family needs, real estate context, and the next legal steps with local professionals.": "Мы превращаем расплывчатую идею «переехать на Карибы» в понятный план: основания, документы, сроки, семья, недвижимость и следующие юридические шаги с местными специалистами.",
+  "Residency Assessment": "Оценка резиденции",
+  "We identify the most realistic route based on income, family situation, documents, timeline, and whether the goal is relocation, backup status, or eventual citizenship planning.": "Мы определяем реалистичный маршрут с учётом дохода, семьи, документов, сроков и цели: переезд, резервный статус или долгосрочный путь к гражданству.",
+  "Document & Application Support": "Документы и сопровождение заявки",
+  "We coordinate the practical side of preparation, translation, local appointments, filing flow, and communication so the process stays organized.": "Мы координируем подготовку, переводы, местные встречи, подачу и коммуникацию, чтобы процесс был понятным и управляемым.",
+  "Relocation & Real Estate Context": "Переезд и недвижимость",
+  "For clients considering a physical move or property purchase, we connect the residency plan with trusted local market guidance and partner agents.": "Если клиент рассматривает переезд или покупку недвижимости, мы связываем план резиденции с локальным рынком и проверенными партнёрами.",
+  "Long-Term Planning": "Долгосрочное планирование",
+  "We help clients understand renewals, family inclusion, lifestyle setup, and questions to discuss with independent legal and tax advisors.": "Мы помогаем понять продления, включение семьи, бытовую адаптацию и вопросы для независимых юристов и налоговых консультантов.",
+  "Service Menu": "Меню услуг",
+  "Clear programs for different residency goals.": "Понятные программы под разные цели резиденции.",
+  "Each client path is packaged around the outcome, while advisory, document preparation, translations, and strategy are handled as part of the coordinated process.": "Каждый маршрут упакован вокруг результата, а консультации, документы, переводы и стратегия входят в единый процесс сопровождения.",
+  "Core Path": "Базовый путь",
+  "Residency Visa": "Виза резидента",
+  "For clients who want a legal base in the Dominican Republic with a clear document route.": "Для клиентов, которым нужна легальная база в Доминикане и понятный маршрут по документам.",
+  "Eligibility review": "Проверка оснований",
+  "Document checklist": "Чек-лист документов",
+  "Application coordination": "Координация подачи",
+  "Capital Path": "Инвестиционный путь",
+  "Investor Residency": "Резиденция инвестора",
+  "For investors and property buyers who want residency aligned with a serious Dominican Republic plan.": "Для инвесторов и покупателей недвижимости, которые хотят связать резиденцию с реальным планом в Доминикане.",
+  "Real estate context": "Контекст недвижимости",
+  "Partner agent flow": "Работа с партнёрскими агентами",
+  "Local handoff support": "Локальное сопровождение",
+  "Retirement": "Пенсия",
+  "Pensioner Residency": "Резиденция пенсионера",
+  "For retirees and pension-income clients considering warmer lifestyle options and longer stays.": "Для пенсионеров и клиентов с пенсионным доходом, которые рассматривают тёплый климат и длительное пребывание.",
+  "Income profile review": "Проверка дохода",
+  "Family planning": "Планирование семьи",
+  "Arrival preparation": "Подготовка приезда",
+  "Family": "Семья",
+  "Family Reunification": "Семейная резиденция",
+  "For spouses, children, and family members who need a coordinated residency file.": "Для супругов, детей и членов семьи, которым нужна единая и правильно собранная заявка.",
+  "Dependent file mapping": "Карта документов семьи",
+  "Document sequencing": "Последовательность документов",
+  "Russian and English support": "Поддержка на русском и английском",
+  "Long-Term": "Долгосрочно",
+  "Permanent Residency": "Постоянная резиденция",
+  "For clients who want a stable long-term position rather than a short tactical move.": "Для клиентов, которым нужен устойчивый долгосрочный статус, а не разовый тактический шаг.",
+  "Renewal planning": "План продлений",
+  "Status tracking": "Отслеживание статуса",
+  "Future route review": "Проверка будущего маршрута",
+  "Future Route": "Будущий маршрут",
+  "Citizenship Assistance": "Сопровождение к гражданству",
+  "For clients who want to understand the long-term pathway and plan responsibly from day one.": "Для клиентов, которые хотят понимать долгосрочный путь и планировать ответственно с первого дня.",
+  "Timeline orientation": "Ориентация по срокам",
+  "Residency continuity": "Непрерывность статуса",
+  "Legal advisor coordination": "Координация с юристами",
+  "Program Comparison": "Сравнение программ",
+  "Choose the route that matches the client, not the other way around.": "Выбираем маршрут под клиента, а не подгоняем клиента под программу.",
+  "Clients do not need another generic immigration menu. They need to understand which path fits their income, family, investment plans, timeline, and long-term goal.": "Клиенту не нужен очередной список иммиграционных услуг. Ему нужно понять, какой путь подходит под доход, семью, инвестиции, сроки и долгосрочную цель.",
+  "Program": "Программа",
+  "Best For": "Для кого",
+  "Typical Focus": "Фокус",
+  "Planning Notes": "Комментарий",
+  "General route": "Общий маршрут",
+  "Families, remote professionals, entrepreneurs": "Семьи, удалённые специалисты, предприниматели",
+  "Clear residency file, document readiness, local coordination": "Понятная заявка, готовность документов, локальная координация",
+  "Good starting point when the client needs a practical second base.": "Хорошая отправная точка, если клиенту нужна практичная вторая база.",
+  "Capital and real estate route": "Капитал и недвижимость",
+  "Property buyers, investors, business owners": "Покупатели недвижимости, инвесторы, владельцы бизнеса",
+  "Investment context, real estate timing, local partner flow": "Инвестиционный контекст, сроки покупки, партнёрский процесс",
+  "Best reviewed before committing to a property or capital plan.": "Лучше проверить до покупки недвижимости или утверждения инвестиционного плана.",
+  "Retirement route": "Пенсионный маршрут",
+  "Retirees and pension-income clients": "Пенсионеры и клиенты с пенсионным доходом",
+  "Income proof, family planning, lifestyle setup": "Подтверждение дохода, семья, образ жизни",
+  "Strong fit for Canadian, US, and European retirement scenarios.": "Хорошо подходит для пенсионных сценариев из Канады, США и Европы.",
+  "Family Residency": "Семейная резиденция",
+  "Dependents and reunification": "Зависимые члены семьи и воссоединение",
+  "Spouses, children, multi-person files": "Супруги, дети, заявки на несколько человек",
+  "Civil documents, translations, sequencing, appointments": "Гражданские документы, переводы, последовательность, встречи",
+  "Family documents should be checked early to avoid delays.": "Семейные документы лучше проверить заранее, чтобы избежать задержек.",
+  "Long-term route": "Долгосрочный маршрут",
+  "Clients planning continuity in the Dominican Republic": "Клиенты, планирующие долгосрочную связь с Доминиканой",
+  "Renewals, status maintenance, long-term planning": "Продления, поддержание статуса, долгосрочное планирование",
+  "Works best when residency is treated as a multi-year strategy.": "Лучше всего работает, когда резиденция рассматривается как многолетняя стратегия.",
+  "Platform Concept": "Концепция платформы",
+  "Estimate, prepare, track, and move forward with less uncertainty.": "Оценить, подготовить, отслеживать и двигаться вперёд без лишней неопределённости.",
+  "The platform layer makes the service easier to buy: clients see a route, estimated range, document steps, and a future client cabinet instead of guessing what happens next.": "Платформенный подход делает услугу понятнее: клиент видит маршрут, ориентир по бюджету, документы и будущий личный кабинет вместо догадок о следующем шаге.",
+  "Residency Cost & Timeline Estimator": "Калькулятор стоимости и сроков",
+  "A practical starting estimate for planning. Final pricing depends on the legal route, family file, translations, government fees, and local professional costs.": "Практичная стартовая оценка для планирования. Итоговая стоимость зависит от маршрута, состава семьи, переводов, госпошлин и работы местных специалистов.",
+  "Applicants": "Заявители",
+  "1 applicant": "1 заявитель",
+  "2 applicants": "2 заявителя",
+  "3 applicants": "3 заявителя",
+  "4 applicants": "4 заявителя",
+  "5+ applicants": "5+ заявителей",
+  "Document readiness": "Готовность документов",
+  "Mostly ready": "Почти готовы",
+  "Some documents missing": "Часть документов отсутствует",
+  "Complex multi-country file": "Сложный файл из нескольких стран",
+  "Planning Snapshot": "Плановая оценка",
+  "Estimated advisory range": "Ориентир по сопровождению",
+  "Estimated timeline": "Ориентир по срокам",
+  "Document load": "Сложность документов",
+  "Recommended next step": "Следующий шаг",
+  "This calculator is intentionally conservative. It helps the client understand scale before a proper document review.": "Калькулятор специально даёт консервативную оценку. Он помогает понять порядок цифр до детальной проверки документов.",
+  "Send My Estimate": "Отправить расчёт",
+  "Client Cabinet": "Личный кабинет",
+  "A future client account for every active file.": "Будущий личный кабинет для каждого активного дела.",
+  "The concept is simple: no scattered messages, no mystery status, no lost document checklist. The client sees what is ready, what is missing, and what happens next.": "Идея простая: без разбросанных сообщений, непонятного статуса и потерянных чек-листов. Клиент видит, что готово, чего не хватает и что дальше.",
+  "Personal document checklist": "Персональный чек-лист документов",
+  "Status tracker and next actions": "Статус и следующие действия",
+  "Upload queue for passports and civil documents": "Загрузка паспортов и гражданских документов",
+  "Timeline, appointments, and renewal reminders": "Сроки, встречи и напоминания о продлениях",
+  "CaribRus Client Cabinet": "Личный кабинет CaribRus",
+  "Residency File 58%": "Дело по резиденции 58%",
+  "Documents under review": "Документы на проверке",
+  "Passport copies received. Civil documents pending apostille check.": "Копии паспортов получены. Гражданские документы ожидают проверки апостиля.",
+  "Next action": "Следующее действие",
+  "Upload police clearance and confirm family member list.": "Загрузить справку о несудимости и подтвердить состав семьи.",
+  "Local coordination": "Локальная координация",
+  "Dominican Republic appointment window to be confirmed after document validation.": "Окно для встречи в Доминикане будет подтверждено после проверки документов.",
+  "Client Paths": "Клиентские сценарии",
+  "Four priority markets, one Caribbean destination.": "Четыре приоритетных рынка, одно карибское направление.",
+  "Messaging should feel different for each audience. Americans, Canadians, and Europeans often think in terms of lifestyle, mobility, retirement, and optionality. Russian-speaking clients often need a second legal base, family security, and practical relocation support.": "Для каждой аудитории важны разные акценты. Американцы, канадцы и европейцы часто думают об образе жизни, мобильности, пенсии и опциональности. Русскоязычным клиентам часто нужна вторая юридическая база, безопасность семьи и практичная релокация.",
+  "United States": "США",
+  "For business owners, remote professionals, families, and retirees who want a Caribbean base outside the US system.": "Для владельцев бизнеса, удалённых специалистов, семей и пенсионеров, которым нужна карибская база вне системы США.",
+  "For clients exploring warmer lifestyle options, retirement planning, flexible stays, and long-term family mobility.": "Для клиентов, которые рассматривают тёплый климат, пенсионное планирование, гибкое пребывание и мобильность семьи.",
+  "For mobile professionals, retirees, and families who want a Caribbean residency option outside the European routine.": "Для мобильных специалистов, пенсионеров и семей, которым нужна карибская резиденция вне европейской рутины.",
+  "Russia & CIS": "Россия и СНГ",
+  "For families and entrepreneurs who need a practical second jurisdiction, relocation route, and trusted Russian-language guidance.": "Для семей и предпринимателей, которым нужна практичная вторая юрисдикция, маршрут релокации и русскоязычное сопровождение.",
+  "How It Works": "Как это работает",
+  "A calm, structured process from first call to residency file.": "Спокойный и структурированный процесс от первого звонка до дела по резиденции.",
+  "Every case is different, so we avoid generic promises. The first goal is to understand the client, confirm what is realistic, and build a clean document route.": "Каждый кейс отличается, поэтому мы избегаем общих обещаний. Сначала нужно понять клиента, подтвердить реалистичный маршрут и собрать чистую документальную линию.",
+  "Free Consultation": "Бесплатная консультация",
+  "We clarify the country of residence, family members, income source, urgency, travel plans, and whether real estate is part of the plan.": "Мы уточняем страну проживания, состав семьи, источник дохода, срочность, планы поездок и роль недвижимости.",
+  "Document Review": "Проверка документов",
+  "We review what you already have, identify gaps, and map apostille, legalization, translation, or timing issues before they slow the file.": "Мы проверяем, что уже есть, находим пробелы и заранее отмечаем вопросы апостиля, легализации, перевода и сроков.",
+  "Application Preparation": "Подготовка заявки",
+  "The residency route, supporting documents, translations, forms, and local appointments are prepared in a clean sequence.": "Маршрут резиденции, документы, переводы, формы и местные встречи готовятся в понятной последовательности.",
+  "Government Submission": "Подача в госорганы",
+  "We coordinate filing flow with local professionals, keep next actions visible, and help the client understand what is happening at each step.": "Мы координируем подачу с местными специалистами, показываем следующие шаги и объясняем, что происходит на каждом этапе.",
+  "Residency Approval": "Одобрение резиденции",
+  "Once approved, we help organize the practical handoff, renewal reminders, and what the new status means for the client and family.": "После одобрения мы помогаем с практическими шагами, напоминаниями о продлении и пониманием нового статуса для клиента и семьи.",
+  "Life in the Dominican Republic": "Жизнь в Доминикане",
+  "For clients relocating or buying property, we connect the residency plan with neighborhoods, real estate partners, schools, and local setup questions.": "Для клиентов, которые переезжают или покупают недвижимость, мы связываем резиденцию с районами, партнёрами, школами и бытовыми вопросами.",
+  "Client Scenarios": "Сценарии клиентов",
+  "International cases we are built to handle.": "Международные кейсы, под которые построен CaribRus.",
+  "Until real testimonials are collected and approved, these scenario cards communicate the kinds of clients CaribRus serves without inventing names, faces, or claims.": "Пока реальные отзывы не собраны и не согласованы, эти сценарии показывают типы клиентов без выдуманных имён, фото и обещаний.",
+  "US Entrepreneur": "Предприниматель из США",
+  "Needs a second jurisdiction, flexible Caribbean access, and a plan that does not require immediate relocation.": "Нужна вторая юрисдикция, гибкий доступ к Карибам и план без обязательного немедленного переезда.",
+  "Business owner profile": "Профиль владельца бизнеса",
+  "Family optionality": "Опции для семьи",
+  "Plan B residency": "Резиденция как План Б",
+  "Canadian Retiree": "Пенсионер из Канады",
+  "Pension-income review": "Проверка пенсионного дохода",
+  "Retirement planning": "Пенсионное планирование",
+  "Local setup context": "Локальная адаптация",
+  "Russian-Speaking Family": "Русскоязычная семья",
+  "Looks for a second legal base, family safety, document coordination, and a Russian-language guide through the process.": "Ищет вторую юридическую базу, безопасность семьи, координацию документов и сопровождение на русском языке.",
+  "Family documents": "Семейные документы",
+  "Relocation route": "Маршрут релокации",
+  "Bilingual support": "Двуязычная поддержка",
+  "Property Buyer": "Покупатель недвижимости",
+  "Wants residency questions answered while evaluating Dominican Republic real estate and local living options.": "Хочет разобраться с резиденцией одновременно с выбором недвижимости и места жизни в Доминикане.",
+  "Buyer pre-screening": "Предварительная проверка покупателя",
+  "Agent collaboration": "Работа с агентами",
+  "Residency plus lifestyle": "Резиденция и образ жизни",
+  "Real Estate Partners": "Партнёры по недвижимости",
+  "Built to work with agencies and individual realtors.": "Создано для работы с агентствами и отдельными риэлторами.",
+  "Residency often appears at the exact moment a client starts asking about property, schools, banking, neighborhoods, and whether the Dominican Republic can become more than a vacation destination. CaribRus can support that conversation without replacing the realtor.": "Вопрос резиденции часто появляется в тот момент, когда клиент спрашивает о недвижимости, школах, банках, районах и жизни в Доминикане. CaribRus усиливает этот разговор, не заменяя риэлтора.",
+  "Residency pre-screening for buyer leads": "Предварительная проверка покупателей на резиденцию",
+  "Referral flow for agents working with foreign clients": "Партнёрский поток для агентов с иностранными клиентами",
+  "English and Russian-language client support": "Поддержка клиентов на английском и русском",
+  "Relocation context that helps serious buyers move forward": "Релокационный контекст, который помогает серьёзным покупателям двигаться дальше",
+  "Questions clients usually ask before starting.": "Вопросы, которые клиенты задают перед стартом.",
+  "These answers are general orientation. Exact requirements, timelines, and legal consequences should be confirmed for each client profile before filing.": "Эти ответы дают общую ориентацию. Точные требования, сроки и юридические последствия нужно подтверждать под конкретный профиль клиента.",
+  "Who is Dominican Republic residency suitable for?": "Кому подходит резиденция Доминиканской Республики?",
+  "Do I need to move permanently to apply?": "Нужно ли переезжать навсегда, чтобы податься?",
+  "Can my family be included?": "Можно ли включить семью?",
+  "Which residency category should I choose?": "Какую категорию резиденции выбрать?",
+  "Can property purchase help my case?": "Может ли покупка недвижимости помочь?",
+  "Do pensioners have a separate path?": "Есть ли отдельный путь для пенсионеров?",
+  "How long does the process take?": "Сколько занимает процесс?",
+  "What documents are usually needed?": "Какие документы обычно нужны?",
+  "Do documents need translation?": "Нужны ли переводы документов?",
+  "Do I need apostilles?": "Нужны ли апостили?",
+  "Can you help Russian-speaking clients?": "Вы помогаете русскоязычным клиентам?",
+  "Can you help US and Canadian clients?": "Вы помогаете клиентам из США и Канады?",
+  "Is this tax advice?": "Это налоговая консультация?",
+  "Is this legal advice?": "Это юридическая консультация?",
+  "Can residency lead to citizenship?": "Может ли резиденция привести к гражданству?",
+  "What happens after approval?": "Что происходит после одобрения?",
+  "Can you work with real estate agents?": "Вы работаете с риэлторами?",
+  "Can I start before choosing a property?": "Можно начать до выбора недвижимости?",
+  "What if my case is urgent?": "Что если кейс срочный?",
+  "How do I start?": "Как начать?",
+  "Start Here": "Начать здесь",
+  "Tell us who the residency plan is for.": "Расскажите, для кого нужен план резиденции.",
+  "Use the form for a first review. We will respond with the next practical step and, if useful, a short list of documents to prepare before the call.": "Заполните форму для первичной проверки. Мы ответим следующим практическим шагом и, при необходимости, коротким списком документов для подготовки.",
+  "For individuals": "Для частных клиентов",
+  "Family, investment, relocation, backup residency": "Семья, инвестиции, переезд, резервная резиденция",
+  "For agents": "Для агентов",
+  "Buyer support, referrals, co-branded client flow": "Поддержка покупателей, рефералы, совместная работа с клиентами",
+  "Languages": "Языки",
+  "English and Russian client communication": "Коммуникация на английском и русском",
+  "Scope": "Формат",
+  "Advisory and coordination with local professionals": "Консультации и координация с местными специалистами",
+  "Phone": "Телефон",
+  "WhatsApp": "WhatsApp",
+  "Telegram": "Telegram",
+  "Email": "Email",
+  "Dominican Republic service area": "Зона работы: Доминиканская Республика",
+  "Local appointments and partner meetings by arrangement": "Локальные встречи и встречи с партнёрами по договорённости",
+  "Residency Review": "Проверка резиденции",
+  "This is an initial request, not legal or tax advice.": "Это первичный запрос, не юридическая и не налоговая консультация.",
+  "Full name": "Имя и фамилия",
+  "Current country": "Текущая страна",
+  "Main goal": "Основная цель",
+  "Short note": "Короткий комментарий",
+  "Request Consultation": "Запросить консультацию",
+  "Select one": "Выберите вариант",
+  "United States": "США",
+  "Russia / CIS": "Россия / СНГ",
+  "Other": "Другое",
+  "Residency as a backup plan": "Резиденция как запасной план",
+  "Relocation to the Dominican Republic": "Переезд в Доминикану",
+  "Family residency": "Семейная резиденция",
+  "Real estate and residency": "Недвижимость и резиденция",
+  "Agency / realtor partnership": "Партнёрство с агентством / риэлтором",
+  "Dominican Republic residency advisory for international families, entrepreneurs, investors, and real estate partners.": "Платформа по резиденции Доминиканской Республики для семей, предпринимателей, инвесторов и партнёров по недвижимости.",
+  "Company": "Компания",
+  "Contact": "Контакты",
+  "Book Consultation": "Записаться на консультацию",
+  "Privacy Policy": "Политика конфиденциальности",
+  "Terms": "Условия",
+  "Legal Disclaimer": "Правовая оговорка",
+  "Russian": "Русский",
+  "English": "English"
+};
+
+const ruPlaceholders = {
+  "Family size, timeline, property plans, or partnership idea": "Состав семьи, сроки, планы по недвижимости или идея партнёрства"
+};
+
+const esText = {
+  "Services": "Servicios",
+  "Programs": "Programas",
+  "Calculator": "Calculadora",
+  "Clients": "Clientes",
+  "Process": "Proceso",
+  "FAQ": "FAQ",
+  "Book a Call": "Contactar",
+  "Dominican Republic Residency Advisory": "Residencia en la República Dominicana",
+  "A clearer platform for Dominican Republic residency.": "Una plataforma clara para la residencia en la República Dominicana.",
+  "CaribRus gives clients from the USA, Canada, Europe, Russia and CIS a transparent way to compare residency paths, estimate timing, prepare documents, and move through the process with a team on the ground.": "CaribRus ayuda a clientes de Estados Unidos, Canadá, Europa, Rusia y la CEI a comparar programas de residencia, estimar plazos, preparar documentos y avanzar con un equipo local.",
+  "Start Residency Review": "Revisar mi caso",
+  "Choose Your Path": "Elegir ruta",
+  "Plan B residency, lifestyle, family mobility": "Residencia Plan B, estilo de vida y movilidad familiar",
+  "Retirement, relocation, international planning": "Retiro, reubicación y planificación internacional",
+  "Flexible Caribbean base and relocation context": "Base flexible en el Caribe y contexto de reubicación",
+  "Second jurisdiction and family security": "Segunda jurisdicción y seguridad familiar",
+  "Real estate agents and relocation partners": "Agentes inmobiliarios y socios de reubicación",
+  "What We Do": "Qué hacemos",
+  "Residency is not just paperwork. It is a jurisdiction strategy.": "La residencia no es solo papeleo. Es una estrategia de jurisdicción.",
+  "We turn a vague idea of \"moving to the Caribbean\" into a clear plan: eligibility, documents, timing, family needs, real estate context, and the next legal steps with local professionals.": "Convertimos la idea de mudarse al Caribe en un plan claro: elegibilidad, documentos, plazos, familia, contexto inmobiliario y próximos pasos con profesionales locales.",
+  "Residency Assessment": "Evaluación de residencia",
+  "Document & Application Support": "Documentos y solicitud",
+  "Relocation & Real Estate Context": "Reubicación e inmobiliaria",
+  "Long-Term Planning": "Planificación a largo plazo",
+  "Service Menu": "Servicios",
+  "Clear programs for different residency goals.": "Programas claros para diferentes objetivos de residencia.",
+  "Core Path": "Ruta principal",
+  "Residency Visa": "Visa de residencia",
+  "Investor Residency": "Residencia para inversionistas",
+  "Pensioner Residency": "Residencia para pensionados",
+  "Family Reunification": "Residencia familiar",
+  "Permanent Residency": "Residencia permanente",
+  "Citizenship Assistance": "Asistencia hacia ciudadanía",
+  "Eligibility review": "Revisión de elegibilidad",
+  "Document checklist": "Lista de documentos",
+  "Application coordination": "Coordinación de solicitud",
+  "Real estate context": "Contexto inmobiliario",
+  "Partner agent flow": "Flujo con agentes socios",
+  "Local handoff support": "Apoyo local",
+  "Income profile review": "Revisión de ingresos",
+  "Family planning": "Planificación familiar",
+  "Arrival preparation": "Preparación de llegada",
+  "Program Comparison": "Comparación de programas",
+  "Choose the route that matches the client, not the other way around.": "Elegimos la ruta que encaja con el cliente, no al revés.",
+  "Program": "Programa",
+  "Best For": "Ideal para",
+  "Typical Focus": "Enfoque",
+  "Planning Notes": "Notas",
+  "General route": "Ruta general",
+  "Capital and real estate route": "Capital e inmobiliaria",
+  "Retirement route": "Ruta de retiro",
+  "Family Residency": "Residencia familiar",
+  "Platform Concept": "Concepto de plataforma",
+  "Estimate, prepare, track, and move forward with less uncertainty.": "Estimar, preparar, dar seguimiento y avanzar con menos incertidumbre.",
+  "Residency Cost & Timeline Estimator": "Estimador de costo y plazo",
+  "Applicants": "Solicitantes",
+  "1 applicant": "1 solicitante",
+  "2 applicants": "2 solicitantes",
+  "3 applicants": "3 solicitantes",
+  "4 applicants": "4 solicitantes",
+  "5+ applicants": "5+ solicitantes",
+  "Document readiness": "Estado de documentos",
+  "Mostly ready": "Casi listos",
+  "Some documents missing": "Faltan algunos documentos",
+  "Complex multi-country file": "Caso complejo de varios países",
+  "Planning Snapshot": "Resumen de planificación",
+  "Estimated advisory range": "Rango estimado de acompañamiento",
+  "Estimated timeline": "Plazo estimado",
+  "Document load": "Carga documental",
+  "Recommended next step": "Siguiente paso recomendado",
+  "This calculator is intentionally conservative. It helps the client understand scale before a proper document review.": "La calculadora es deliberadamente conservadora. Ayuda al cliente a entender el rango antes de una revisión documental completa.",
+  "Send My Estimate": "Enviar estimación",
+  "Client Cabinet": "Portal del cliente",
+  "A future client account for every active file.": "Un futuro portal para cada expediente activo.",
+  "Client Paths": "Perfiles de clientes",
+  "Four priority markets, one Caribbean destination.": "Cuatro mercados prioritarios, un destino caribeño.",
+  "United States": "Estados Unidos",
+  "Russia & CIS": "Rusia y CEI",
+  "How It Works": "Cómo funciona",
+  "A calm, structured process from first call to residency file.": "Un proceso claro y estructurado desde la primera llamada hasta el expediente de residencia.",
+  "Free Consultation": "Consulta gratuita",
+  "Document Review": "Revisión de documentos",
+  "Application Preparation": "Preparación de solicitud",
+  "Government Submission": "Presentación ante autoridades",
+  "Residency Approval": "Aprobación de residencia",
+  "Life in the Dominican Republic": "Vida en la República Dominicana",
+  "Client Scenarios": "Escenarios de clientes",
+  "International cases we are built to handle.": "Casos internacionales para los que está diseñado CaribRus.",
+  "US Entrepreneur": "Empresario de EE. UU.",
+  "Canadian Retiree": "Retirado canadiense",
+  "Russian-Speaking Family": "Familia rusohablante",
+  "Property Buyer": "Comprador de propiedad",
+  "Real Estate Partners": "Socios inmobiliarios",
+  "Built to work with agencies and individual realtors.": "Diseñado para trabajar con agencias y agentes inmobiliarios independientes.",
+  "Questions clients usually ask before starting.": "Preguntas frecuentes antes de empezar.",
+  "Who is Dominican Republic residency suitable for?": "¿Para quién es adecuada la residencia dominicana?",
+  "Do I need to move permanently to apply?": "¿Debo mudarme permanentemente para aplicar?",
+  "Can my family be included?": "¿Puedo incluir a mi familia?",
+  "Which residency category should I choose?": "¿Qué categoría de residencia debo elegir?",
+  "Can property purchase help my case?": "¿Comprar propiedad puede ayudar a mi caso?",
+  "Do pensioners have a separate path?": "¿Existe una ruta para pensionados?",
+  "How long does the process take?": "¿Cuánto tarda el proceso?",
+  "What documents are usually needed?": "¿Qué documentos se necesitan normalmente?",
+  "Do documents need translation?": "¿Los documentos necesitan traducción?",
+  "Do I need apostilles?": "¿Necesito apostillas?",
+  "Can you help Russian-speaking clients?": "¿Ayudan a clientes rusohablantes?",
+  "Can you help US and Canadian clients?": "¿Ayudan a clientes de EE. UU. y Canadá?",
+  "Is this tax advice?": "¿Esto es asesoría fiscal?",
+  "Is this legal advice?": "¿Esto es asesoría legal?",
+  "Can residency lead to citizenship?": "¿La residencia puede llevar a ciudadanía?",
+  "What happens after approval?": "¿Qué pasa después de la aprobación?",
+  "Can you work with real estate agents?": "¿Trabajan con agentes inmobiliarios?",
+  "Can I start before choosing a property?": "¿Puedo empezar antes de elegir una propiedad?",
+  "What if my case is urgent?": "¿Qué pasa si mi caso es urgente?",
+  "How do I start?": "¿Cómo empiezo?",
+  "Start Here": "Empieza aquí",
+  "Tell us who the residency plan is for.": "Cuéntanos para quién es el plan de residencia.",
+  "For individuals": "Para particulares",
+  "For agents": "Para agentes",
+  "Languages": "Idiomas",
+  "Scope": "Alcance",
+  "Phone": "Teléfono",
+  "WhatsApp": "WhatsApp",
+  "Telegram": "Telegram",
+  "Email": "Email",
+  "Residency Review": "Revisión de residencia",
+  "Full name": "Nombre completo",
+  "Current country": "País actual",
+  "Main goal": "Objetivo principal",
+  "Short note": "Nota breve",
+  "Request Consultation": "Solicitar consulta",
+  "Select one": "Selecciona una opción",
+  "Other": "Otro",
+  "Residency as a backup plan": "Residencia como plan de respaldo",
+  "Relocation to the Dominican Republic": "Reubicación a la República Dominicana",
+  "Family residency": "Residencia familiar",
+  "Real estate and residency": "Inmobiliaria y residencia",
+  "Agency / realtor partnership": "Alianza con agencia / realtor",
+  "Company": "Empresa",
+  "Contact": "Contacto",
+  "Book Consultation": "Agendar consulta",
+  "Privacy Policy": "Política de privacidad",
+  "Terms": "Términos",
+  "Legal Disclaimer": "Aviso legal",
+  "Russian": "Ruso",
+  "English": "Inglés"
+};
+
+const esPlaceholders = {
+  "Family size, timeline, property plans, or partnership idea": "Tamaño de familia, plazos, planes inmobiliarios o idea de alianza"
+};
+
+function walkTextNodes(root, callback) {
+  const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+    acceptNode(node) {
+      const parent = node.parentElement;
+      if (!parent || ["SCRIPT", "STYLE"].includes(parent.tagName)) return NodeFilter.FILTER_REJECT;
+      return node.nodeValue.trim() ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
+    }
+  });
+  let node = walker.nextNode();
+  while (node) {
+    callback(node);
+    node = walker.nextNode();
+  }
+}
+
+function setLanguage(lang) {
+  const languages = ["en", "ru", "es"];
+  if (!languages.includes(lang)) lang = "en";
+  const dictionaries = { ru: ruText, es: esText };
+  const placeholders = { ru: ruPlaceholders, es: esPlaceholders };
+  document.documentElement.lang = lang;
+  document.querySelectorAll("[data-lang-option]").forEach(button => {
+    button.classList.toggle("is-active", button.dataset.langOption === lang);
+  });
+  document.title = lang === "ru"
+    ? "CaribRus - платформа резиденции Доминиканской Республики"
+    : lang === "es"
+      ? "CaribRus - plataforma de residencia en República Dominicana"
+      : "CaribRus - Dominican Republic Residency Platform";
+  const description = document.querySelector('meta[name="description"]');
+  if (description) {
+    description.content = lang === "ru"
+      ? "Платформа по оформлению резиденции Доминиканской Республики для клиентов из США, Канады, Европы, России и СНГ: сравнение программ, документы, сроки, калькулятор и сопровождение."
+      : lang === "es"
+        ? "Plataforma de residencia en la República Dominicana para clientes de Estados Unidos, Canadá, Europa, Rusia y la CEI: comparación de programas, documentos, plazos, calculadora y acompañamiento."
+      : "Dominican Republic residency platform for clients from the USA, Canada, Europe, Russia and CIS: program comparison, document strategy, timelines, cost estimates, and guided support.";
+  }
+
+  walkTextNodes(document.body, node => {
+    if (!node.__enText) node.__enText = node.nodeValue;
+    const key = node.__enText.trim();
+    if (dictionaries[lang] && dictionaries[lang][key]) {
+      const leading = node.__enText.match(/^\s*/)[0];
+      const trailing = node.__enText.match(/\s*$/)[0];
+      node.nodeValue = leading + dictionaries[lang][key] + trailing;
+    } else {
+      node.nodeValue = node.__enText;
+    }
+  });
+
+  document.querySelectorAll("[placeholder]").forEach(input => {
+    if (!input.dataset.enPlaceholder) input.dataset.enPlaceholder = input.placeholder;
+    input.placeholder = placeholders[lang] && placeholders[lang][input.dataset.enPlaceholder]
+      ? placeholders[lang][input.dataset.enPlaceholder]
+      : input.dataset.enPlaceholder;
+  });
+
+  localStorage.setItem("caribrus-lang", lang);
+  if (window.caribrusCalculatorReady) updateCalculator();
+}
+
+document.querySelectorAll("[data-lang-option]").forEach(button => {
+  button.addEventListener("click", () => {
+    setLanguage(button.dataset.langOption);
+  });
+});
+
+setLanguage(localStorage.getItem("caribrus-lang") || "en");
+
+const calculator = document.getElementById("residencyCalculator");
+const sendEstimate = document.getElementById("sendEstimate");
+const programProfiles = {
+  general: { base: 1900, max: 4200, months: [3, 5], docs: "Standard", docsRu: "Стандартная", docsEs: "Estándar", step: "Review call", stepRu: "Звонок-разбор", stepEs: "Llamada de revisión" },
+  investor: { base: 4200, max: 6800, months: [4, 7], docs: "High", docsRu: "Высокая", docsEs: "Alta", step: "Investment review", stepRu: "Разбор инвестиций", stepEs: "Revisión de inversión" },
+  pensioner: { base: 3200, max: 5200, months: [3, 6], docs: "Income proof", docsRu: "Доход", docsEs: "Ingresos", step: "Income check", stepRu: "Проверка дохода", stepEs: "Revisión de ingresos" },
+  family: { base: 3800, max: 6400, months: [4, 7], docs: "Family file", docsRu: "Семейная", docsEs: "Familiar", step: "Family document audit", stepRu: "Аудит семейных документов", stepEs: "Auditoría familiar" },
+  permanent: { base: 4500, max: 7200, months: [5, 9], docs: "Long-term", docsRu: "Долгосрочная", docsEs: "Largo plazo", step: "Status review", stepRu: "Проверка статуса", stepEs: "Revisión de estatus" }
+};
+
+function formatMoney(value) {
+  return "$" + (value / 1000).toFixed(value % 1000 === 0 ? 0 : 1) + "k";
+}
+
+function selectedText(select) {
+  return select.options[select.selectedIndex].textContent.trim();
+}
+
+function updateEstimateLink() {
+  if (!calculator || !sendEstimate) return;
+  const lang = document.documentElement.lang;
+  const cost = document.getElementById("estimateCost").textContent;
+  const time = document.getElementById("estimateTime").textContent;
+  const intro = lang === "ru"
+    ? "Здравствуйте! Хочу обсудить расчёт резиденции Доминиканской Республики."
+    : lang === "es"
+      ? "Hola. Me gustaría revisar esta estimación para residencia en República Dominicana."
+      : "Hello. I would like to review this Dominican Republic residency estimate.";
+  const labels = lang === "ru"
+    ? ["Программа", "Заявители", "Документы", "Стоимость", "Срок"]
+    : lang === "es"
+      ? ["Programa", "Solicitantes", "Documentos", "Costo", "Plazo"]
+      : ["Program", "Applicants", "Documents", "Cost", "Timeline"];
+  const message = [
+    intro,
+    `${labels[0]}: ${selectedText(calculator.program)}`,
+    `${labels[1]}: ${selectedText(calculator.applicants)}`,
+    `${labels[2]}: ${selectedText(calculator.docs)}`,
+    `${labels[3]}: ${cost}`,
+    `${labels[4]}: ${time}`
+  ].join("\n");
+  sendEstimate.href = "https://wa.me/18297200513?text=" + encodeURIComponent(message);
+}
+
+function updateCalculator() {
+  if (!calculator) return;
+  const lang = document.documentElement.lang;
+  const isRu = lang === "ru";
+  const isEs = lang === "es";
+  const profile = programProfiles[calculator.program.value];
+  const applicants = Number(calculator.applicants.value);
+  const docFactor = calculator.docs.value === "ready" ? 0 : calculator.docs.value === "partial" ? 650 : 1400;
+  const applicantFactor = Math.max(applicants - 1, 0) * 550;
+  const timeAdd = calculator.docs.value === "ready" ? 0 : calculator.docs.value === "partial" ? 1 : 2;
+
+  document.getElementById("estimateCost").textContent = formatMoney(profile.base + applicantFactor + docFactor) + "-" + formatMoney(profile.max + applicantFactor + docFactor);
+  document.getElementById("estimateTime").textContent = (profile.months[0] + timeAdd) + "-" + (profile.months[1] + timeAdd) + (isRu ? " мес." : isEs ? " meses" : " months");
+  document.getElementById("estimateDocs").textContent = isRu ? profile.docsRu : isEs ? profile.docsEs : profile.docs;
+  document.getElementById("estimateStep").textContent = isRu ? profile.stepRu : isEs ? profile.stepEs : profile.step;
+  updateEstimateLink();
+}
+
+if (calculator) {
+  window.caribrusCalculatorReady = true;
+  calculator.addEventListener("change", updateCalculator);
+  updateCalculator();
+}
+
+document.getElementById("leadForm").addEventListener("submit", async function(event) {
+  event.preventDefault();
+  const note = document.getElementById("formNote");
+  const payload = {
+    name: this.name.value,
+    email: this.email.value,
+    country: this.country.value,
+    goal: this.goal.value,
+    message: this.message.value,
+    source: "caribrus-home"
+  };
+
+  note.textContent = "Sending request...";
+
+  try {
+    await fetch(endpoint, {
+      method: "POST",
+      body: JSON.stringify(payload),
+      headers: { "Content-Type": "application/json" }
+    });
+    note.textContent = "Request sent. We will contact you shortly.";
+    this.reset();
+  } catch (error) {
+    note.textContent = "Please email us directly if the form does not send.";
+  }
+});
+</script>
+</body>
+</html>

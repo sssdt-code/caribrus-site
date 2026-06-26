@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CaribRus — Caribbean Second Residency</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+  margin: 0;
+  font-family: -apple-system, Arial;
+  background: #f6f8fc;
+  color: #111;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 40px;
+  background: white;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+}
+
+.logo { font-weight: 700; }
+
+nav a {
+  margin-left: 15px;
+  text-decoration: none;
+  color: #444;
+  font-size: 14px;
+}
+
+/* HERO */
+.hero {
+  padding: 120px 40px;
+  text-align: center;
+  background: linear-gradient(180deg, #e8f2ff, #ffffff);
+}
+
+.hero h1 {
+  font-size: 54px;
+}
+
+.hero p {
+  max-width: 750px;
+  margin: 0 auto;
+  color: #555;
+  font-size: 18px;
+}
+
+.cta {
+  margin-top: 25px;
+  padding: 14px 22px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* SECTIONS */
+.section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 80px 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 22px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
+
+/* TRUST */
+.trust {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.badge {
+  background: white;
+  padding: 18px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.05);
+}
+
+/* FORM */
+input, select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+button.submit {
+  width: 100%;
+  margin-top: 15px;
+  padding: 14px;
+  background: #16a34a;
+  color: white;
+  border: none;
+  border-radius: 10px;
+}
+
+/* MOBILE */
+@media(max-width: 768px){
+  .grid, .trust { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 36px; }
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+  <div class="logo">CaribRus</div>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#solution">Solution</a>
+    <a href="#why">Why Caribbean</a>
+    <a href="#contact">Consultation</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>Second Residency in the Caribbean</h1>
+  <p>
+    A legal residency solution for entrepreneurs, investors, and families from the United States and Canada seeking diversification, mobility, and long-term security.
+  </p>
+
+  <button class="cta" onclick="document.getElementById('contact').scrollIntoView()">
+    Book Consultation
+  </button>
+</div>
+
+<!-- SOLUTION -->
+<div class="section" id="solution">
+  <h2>What this is</h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Second Residency</h3>
+      <p>A legal Caribbean residency option outside the US/Canada system.</p>
+    </div>
+
+    <div class="card">
+      <h3>Plan B Jurisdiction</h3>
+      <p>A backup legal base for families and capital protection.</p>
+    </div>
+
+    <div class="card">
+      <h3>Tax & Mobility Strategy</h3>
+      <p>International diversification of lifestyle and residency status.</p>
+    </div>
+
+    <div class="card">
+      <h3>Family Protection</h3>
+      <p>Long-term stability and relocation optionality for your family.</p>
+    </div>
+  </div>
+</div>
+
+<!-- WHY CARIBBEAN -->
+<div class="section" id="why">
+  <h2>Why the Dominican Republic</h2>
+
+  <div class="trust">
+    <div class="badge">Fast residency process</div>
+    <div class="badge">Family inclusion allowed</div>
+    <div class="badge">Path to citizenship</div>
+    <div class="badge">Low cost of living</div>
+    <div class="badge">Stable Caribbean jurisdiction</div>
+    <div class="badge">Lifestyle flexibility</div>
+  </div>
+</div>
+
+<!-- PROCESS -->
+<div class="section">
+  <h2>How it works</h2>
+
+  <div class="card">
+    1. Eligibility assessment<br>
+    2. Document preparation<br>
+    3. Application submission<br>
+    4. Entry into Dominican Republic<br>
+    5. Residency approval<br>
+    6. Long-term citizenship pathway
+  </div>
+</div>
+
+<!-- FORM -->
+<div class="section" id="contact">
+  <h2>Get Free Consultation</h2>
+
+  <div class="card">
+    <form id="leadForm">
+
+      <input name="name" placeholder="Full Name" required>
+      <input name="email" placeholder="Email" required>
+
+      <select name="country">
+        <option>USA</option>
+        <option>Canada</option>
+      </select>
+
+      <button class="submit">Request Consultation</button>
+    </form>
+  </div>
+</div>
+
+<footer style="text-align:center;padding:40px;color:#777;">
+  © 2026 CaribRus — Caribbean Residency Advisory
+</footer>
+
+<script>
+const endpoint = "https://script.google.com/macros/s/AKfycbx8WibI7jILRra77xnk_Rohg3dlMrf5ciZEz0EOXCZz9BkSXEAJUrFA8sS57W-GR_eQpA/exec";
+
+document.getElementById("leadForm").addEventListener("submit", async function(e){
+  e.preventDefault();
+
+  const data = {
+    name: this.name.value,
+    email: this.email.value,
+    country: this.country.value
+  };
+
+  await fetch(endpoint, {
+    method: "POST",
+    body: JSON.stringify(data),
+    headers: {"Content-Type": "application/json"}
+  });
+
+  alert("We will contact you shortly.");
+  this.reset();
+});
+</script>
+
+</body>
+</html>
