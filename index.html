@@ -1106,6 +1106,15 @@ textarea {
   font-weight: 700;
 }
 
+.form-note a {
+  display: inline-flex;
+  margin: 8px 8px 0 0;
+  padding: 8px 10px;
+  border-radius: 8px;
+  color: #fff;
+  background: var(--leaf);
+}
+
 .site-footer {
   scroll-margin-top: 92px;
   padding: 54px clamp(18px, 5vw, 72px) 28px;
@@ -1964,7 +1973,7 @@ textarea {
   </section>
 </main>
 
-<a class="floating-whatsapp" href="https://wa.me/18297200513" target="_blank" rel="noopener" aria-label="Open WhatsApp chat">WhatsApp</a>
+<a class="floating-whatsapp" href="https://wa.me/18297200513?text=Hello%2C%20I%20would%20like%20to%20discuss%20Dominican%20Republic%20residency." target="_blank" rel="noopener" aria-label="Open WhatsApp chat">WhatsApp</a>
 
 <footer class="site-footer">
   <div class="footer-inner">
@@ -2567,6 +2576,26 @@ function saveLeadBackup(payload) {
   localStorage.setItem(leadBackupKey, JSON.stringify(backups.slice(-20)));
 }
 
+function buildLeadMessage(payload) {
+  return [
+    "New CaribRus residency review request",
+    `Name: ${payload.name}`,
+    `Email: ${payload.email}`,
+    `Country: ${payload.country}`,
+    `Goal: ${payload.goal}`,
+    `Message: ${payload.message || "Not provided"}`
+  ].join("\n");
+}
+
+function withTimeout(promise, ms = 10000) {
+  return Promise.race([
+    promise,
+    new Promise((_, reject) => {
+      window.setTimeout(() => reject(new Error("Request timeout")), ms);
+    })
+  ]);
+}
+
 document.getElementById("leadForm").addEventListener("submit", async function(event) {
   event.preventDefault();
   const note = document.getElementById("formNote");
@@ -2576,22 +2605,27 @@ document.getElementById("leadForm").addEventListener("submit", async function(ev
     country: this.country.value,
     goal: this.goal.value,
     message: this.message.value,
-    source: "caribrus-home"
+    source: "caribrus-home",
+    submittedAt: new Date().toISOString()
   };
 
   note.textContent = "Sending request...";
 
   try {
-    await fetch(endpoint, {
+    await withTimeout(fetch(endpoint, {
       method: "POST",
+      mode: "no-cors",
       body: JSON.stringify(payload),
-      headers: { "Content-Type": "application/json" }
-    });
+      headers: { "Content-Type": "text/plain;charset=utf-8" }
+    }));
     note.textContent = "Request sent. We will contact you shortly.";
     this.reset();
   } catch (error) {
     saveLeadBackup(payload);
-    note.textContent = "Connection issue. Your request is saved in this browser. Please email us directly if the form does not send.";
+    const message = buildLeadMessage(payload);
+    const whatsappUrl = "https://wa.me/18297200513?text=" + encodeURIComponent(message);
+    const emailUrl = "mailto:caribrus@list.ru?subject=" + encodeURIComponent("CaribRus residency review request") + "&body=" + encodeURIComponent(message);
+    note.innerHTML = `Connection issue. Your request is saved in this browser.<br><a href="${whatsappUrl}" target="_blank" rel="noopener">Send via WhatsApp</a><a href="${emailUrl}">Email request</a>`;
   }
 });
 </script>
