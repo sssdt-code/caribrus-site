@@ -6,16 +6,57 @@
 <title>CaribRus - Dominican Republic Residency Platform</title>
 <meta name="description" content="Dominican Republic residency platform for clients from the USA, Canada, Europe, Russia and CIS: program comparison, document strategy, timelines, cost estimates, and guided support.">
 <meta name="keywords" content="Dominican Republic residency, Dominican residency visa, investor residency Dominican Republic, pensioner residency Dominican Republic, residency platform, Caribbean residency, Dominican Republic immigration support">
+<meta name="theme-color" content="#087e8b">
 <link rel="canonical" href="https://caribrus.com/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CaribRus">
+<meta property="og:title" content="CaribRus - Dominican Republic Residency Platform">
+<meta property="og:description" content="Guided Dominican Republic residency planning for clients from the USA, Canada, Europe, Russia and CIS.">
+<meta property="og:url" content="https://caribrus.com/">
+<meta property="og:image" content="https://caribrus.com/dominican-pier-hero.jpg">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CaribRus - Dominican Republic Residency Platform">
+<meta name="twitter:description" content="Compare residency routes, estimate timelines, prepare documents, and plan your Dominican Republic residency with guided support.">
+<meta name="twitter:image" content="https://caribrus.com/dominican-pier-hero.jpg">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "CaribRus",
-  "description": "Dominican Republic residency platform for international families, entrepreneurs, investors, retirees, and real estate partners.",
-  "areaServed": ["United States", "Canada", "Europe", "Russia", "Dominican Republic"],
-  "serviceType": ["Dominican Republic residency advisory", "Investor residency coordination", "Pensioner residency support", "Family residency planning", "Document preparation"],
-  "url": "https://caribrus.com/"
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://caribrus.com/#organization",
+      "name": "CaribRus",
+      "url": "https://caribrus.com/",
+      "email": "caribrus@list.ru",
+      "telephone": "+18297200513",
+      "logo": "https://caribrus.com/favicon.svg",
+      "sameAs": [
+        "https://wa.me/18297200513",
+        "https://t.me/+18297200513"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://caribrus.com/#website",
+      "name": "CaribRus",
+      "url": "https://caribrus.com/",
+      "publisher": { "@id": "https://caribrus.com/#organization" },
+      "inLanguage": ["en", "es", "ru"]
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://caribrus.com/#service",
+      "name": "CaribRus Dominican Republic Residency Platform",
+      "url": "https://caribrus.com/",
+      "image": "https://caribrus.com/dominican-pier-hero.jpg",
+      "description": "Dominican Republic residency planning, document preparation, program comparison, timeline estimation, and local coordination for international clients.",
+      "areaServed": ["United States", "Canada", "Europe", "Russia", "Dominican Republic"],
+      "serviceType": ["Residency visa planning", "Investor residency coordination", "Pensioner residency support", "Family residency planning", "Document preparation", "Real estate partner support"],
+      "provider": { "@id": "https://caribrus.com/#organization" }
+    }
+  ]
 }
 </script>
 <style>
@@ -2451,6 +2492,7 @@ document.querySelectorAll("[data-lang-option]").forEach(button => {
 
 setLanguage(localStorage.getItem("caribrus-lang") || "en");
 
+const leadBackupKey = "caribrus-lead-backups";
 const calculator = document.getElementById("residencyCalculator");
 const sendEstimate = document.getElementById("sendEstimate");
 const programProfiles = {
@@ -2519,6 +2561,12 @@ if (calculator) {
   updateCalculator();
 }
 
+function saveLeadBackup(payload) {
+  const backups = JSON.parse(localStorage.getItem(leadBackupKey) || "[]");
+  backups.push({ ...payload, savedAt: new Date().toISOString() });
+  localStorage.setItem(leadBackupKey, JSON.stringify(backups.slice(-20)));
+}
+
 document.getElementById("leadForm").addEventListener("submit", async function(event) {
   event.preventDefault();
   const note = document.getElementById("formNote");
@@ -2542,7 +2590,8 @@ document.getElementById("leadForm").addEventListener("submit", async function(ev
     note.textContent = "Request sent. We will contact you shortly.";
     this.reset();
   } catch (error) {
-    note.textContent = "Please email us directly if the form does not send.";
+    saveLeadBackup(payload);
+    note.textContent = "Connection issue. Your request is saved in this browser. Please email us directly if the form does not send.";
   }
 });
 </script>
