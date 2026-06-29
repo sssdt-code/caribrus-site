@@ -574,6 +574,47 @@ h2 {
   font-size: 14px;
 }
 
+.document-checklist {
+  margin-top: 16px;
+  padding: 16px;
+  border-radius: 8px;
+  background: #f7fbfb;
+}
+
+.document-checklist span {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.document-checklist ul {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.document-checklist li {
+  position: relative;
+  padding-left: 18px;
+  font-size: 14px;
+  font-weight: 680;
+}
+
+.document-checklist li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: var(--reef);
+}
+
 .floating-whatsapp {
   position: fixed;
   right: 22px;
@@ -1115,6 +1156,61 @@ textarea {
   background: var(--leaf);
 }
 
+.case-snapshot {
+  display: none;
+  margin-top: 18px;
+  padding: 18px;
+  border-radius: 8px;
+  background: #f7fbfb;
+  border: 1px solid #d8e0e2;
+}
+
+.case-snapshot.is-visible {
+  display: block;
+}
+
+.case-snapshot h4 {
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.case-status {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  margin: 12px 0;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 780;
+}
+
+.case-snapshot .progress-line {
+  height: 8px;
+  margin: 10px 0 14px;
+  background: #dfe8e9;
+}
+
+.case-snapshot .progress-line span {
+  width: var(--case-progress, 35%);
+}
+
+.case-snapshot ul {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.case-snapshot li {
+  padding: 9px 10px;
+  border-radius: 8px;
+  background: #fff;
+  color: #33444b;
+  font-size: 14px;
+  font-weight: 700;
+}
+
 .site-footer {
   scroll-margin-top: 92px;
   padding: 54px clamp(18px, 5vw, 72px) 28px;
@@ -1539,6 +1635,26 @@ textarea {
           <h3>Residency Cost & Timeline Estimator</h3>
           <p class="lead">A practical starting estimate for planning. Final pricing depends on the legal route, family file, translations, government fees, and local professional costs.</p>
           <div class="field">
+            <label for="calcCountry">Current country</label>
+            <select id="calcCountry" name="country">
+              <option value="usa">United States</option>
+              <option value="canada">Canada</option>
+              <option value="europe">Europe</option>
+              <option value="russia">Russia / CIS</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="calcGoal">Primary goal</label>
+            <select id="calcGoal" name="goal">
+              <option value="residency">Residency / Plan B</option>
+              <option value="relocation">Relocation</option>
+              <option value="permanent">Permanent residency</option>
+              <option value="citizenship">Citizenship pathway</option>
+              <option value="realestate">Real estate and residency</option>
+            </select>
+          </div>
+          <div class="field">
             <label for="calcProgram">Program</label>
             <select id="calcProgram" name="program">
               <option value="general">Residency Visa</option>
@@ -1546,6 +1662,16 @@ textarea {
               <option value="pensioner">Pensioner Residency</option>
               <option value="family">Family Residency</option>
               <option value="permanent">Permanent Residency</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="calcProfile">Profile</label>
+            <select id="calcProfile" name="profile">
+              <option value="standard">Professional / entrepreneur</option>
+              <option value="investor">Investor / property buyer</option>
+              <option value="rentista">Rentista / passive income</option>
+              <option value="pensioner">Pensioner</option>
+              <option value="marriage">Marriage / family tie</option>
             </select>
           </div>
           <div class="field">
@@ -1571,6 +1697,10 @@ textarea {
           <h3>Planning Snapshot</h3>
           <div class="result-grid">
             <div class="result-box">
+              <span>Program fit</span>
+              <strong id="estimateFit">Good fit</strong>
+            </div>
+            <div class="result-box">
               <span>Estimated advisory range</span>
               <strong id="estimateCost">$1.9k-$4.2k</strong>
             </div>
@@ -1586,6 +1716,10 @@ textarea {
               <span>Recommended next step</span>
               <strong id="estimateStep">Review call</strong>
             </div>
+          </div>
+          <div class="document-checklist">
+            <span>Likely document checklist</span>
+            <ul id="estimateChecklist"></ul>
           </div>
           <p class="result-note">This calculator is intentionally conservative. It helps the client understand scale before a proper document review.</p>
           <a class="button estimate-whatsapp" id="sendEstimate" href="https://wa.me/18297200513" target="_blank" rel="noopener">Send My Estimate</a>
@@ -1968,6 +2102,16 @@ textarea {
         </div>
         <button class="button primary" type="submit">Request Consultation</button>
         <div class="form-note" id="formNote" role="status" aria-live="polite"></div>
+        <div class="case-snapshot" id="caseSnapshot" aria-live="polite">
+          <h4>Your case snapshot</h4>
+          <p>Initial file created. We will confirm the route after document review.</p>
+          <div class="case-status">
+            <span id="caseRoute">Route: Review pending</span>
+            <span id="caseProgress">35% ready</span>
+          </div>
+          <div class="progress-line"><span id="caseProgressBar"></span></div>
+          <ul id="caseChecklist"></ul>
+        </div>
       </form>
     </div>
   </section>
@@ -2131,14 +2275,28 @@ const ruText = {
   "4 applicants": "4 заявителя",
   "5+ applicants": "5+ заявителей",
   "Document readiness": "Готовность документов",
+  "Primary goal": "Основная цель",
+  "Residency / Plan B": "Резиденция / План Б",
+  "Relocation": "Переезд",
+  "Permanent residency": "Постоянная резиденция",
+  "Citizenship pathway": "Путь к гражданству",
+  "Profile": "Профиль",
+  "Professional / entrepreneur": "Специалист / предприниматель",
+  "Investor / property buyer": "Инвестор / покупатель недвижимости",
+  "Rentista / passive income": "Рентиста / пассивный доход",
+  "Pensioner": "Пенсионер",
+  "Marriage / family tie": "Брак / семейная связь",
   "Mostly ready": "Почти готовы",
   "Some documents missing": "Часть документов отсутствует",
   "Complex multi-country file": "Сложный файл из нескольких стран",
   "Planning Snapshot": "Плановая оценка",
+  "Program fit": "Подходит ли программа",
+  "Good fit": "Хорошо подходит",
   "Estimated advisory range": "Ориентир по сопровождению",
   "Estimated timeline": "Ориентир по срокам",
   "Document load": "Сложность документов",
   "Recommended next step": "Следующий шаг",
+  "Likely document checklist": "Предварительный список документов",
   "This calculator is intentionally conservative. It helps the client understand scale before a proper document review.": "Калькулятор специально даёт консервативную оценку. Он помогает понять порядок цифр до детальной проверки документов.",
   "Send My Estimate": "Отправить расчёт",
   "Client Cabinet": "Личный кабинет",
@@ -2342,14 +2500,28 @@ const esText = {
   "4 applicants": "4 solicitantes",
   "5+ applicants": "5+ solicitantes",
   "Document readiness": "Estado de documentos",
+  "Primary goal": "Objetivo principal",
+  "Residency / Plan B": "Residencia / Plan B",
+  "Relocation": "Reubicación",
+  "Permanent residency": "Residencia permanente",
+  "Citizenship pathway": "Ruta hacia ciudadanía",
+  "Profile": "Perfil",
+  "Professional / entrepreneur": "Profesional / empresario",
+  "Investor / property buyer": "Inversionista / comprador",
+  "Rentista / passive income": "Rentista / ingresos pasivos",
+  "Pensioner": "Pensionado",
+  "Marriage / family tie": "Matrimonio / vínculo familiar",
   "Mostly ready": "Casi listos",
   "Some documents missing": "Faltan algunos documentos",
   "Complex multi-country file": "Caso complejo de varios países",
   "Planning Snapshot": "Resumen de planificación",
+  "Program fit": "Encaje del programa",
+  "Good fit": "Buen encaje",
   "Estimated advisory range": "Rango estimado de acompañamiento",
   "Estimated timeline": "Plazo estimado",
   "Document load": "Carga documental",
   "Recommended next step": "Siguiente paso recomendado",
+  "Likely document checklist": "Lista probable de documentos",
   "This calculator is intentionally conservative. It helps the client understand scale before a proper document review.": "La calculadora es deliberadamente conservadora. Ayuda al cliente a entender el rango antes de una revisión documental completa.",
   "Send My Estimate": "Enviar estimación",
   "Client Cabinet": "Portal del cliente",
@@ -2505,11 +2677,71 @@ const leadBackupKey = "caribrus-lead-backups";
 const calculator = document.getElementById("residencyCalculator");
 const sendEstimate = document.getElementById("sendEstimate");
 const programProfiles = {
-  general: { base: 1900, max: 4200, months: [3, 5], docs: "Standard", docsRu: "Стандартная", docsEs: "Estándar", step: "Review call", stepRu: "Звонок-разбор", stepEs: "Llamada de revisión" },
-  investor: { base: 4200, max: 6800, months: [4, 7], docs: "High", docsRu: "Высокая", docsEs: "Alta", step: "Investment review", stepRu: "Разбор инвестиций", stepEs: "Revisión de inversión" },
-  pensioner: { base: 3200, max: 5200, months: [3, 6], docs: "Income proof", docsRu: "Доход", docsEs: "Ingresos", step: "Income check", stepRu: "Проверка дохода", stepEs: "Revisión de ingresos" },
-  family: { base: 3800, max: 6400, months: [4, 7], docs: "Family file", docsRu: "Семейная", docsEs: "Familiar", step: "Family document audit", stepRu: "Аудит семейных документов", stepEs: "Auditoría familiar" },
-  permanent: { base: 4500, max: 7200, months: [5, 9], docs: "Long-term", docsRu: "Долгосрочная", docsEs: "Largo plazo", step: "Status review", stepRu: "Проверка статуса", stepEs: "Revisión de estatus" }
+  general: {
+    base: 1900,
+    max: 4200,
+    months: [3, 5],
+    docs: "Standard",
+    docsRu: "Стандартная",
+    docsEs: "Estándar",
+    step: "Review call",
+    stepRu: "Звонок-разбор",
+    stepEs: "Llamada de revisión",
+    ideal: ["standard", "rentista"],
+    checklist: ["Passport copy", "Birth certificate", "Police clearance", "Proof of address", "Document translation review"]
+  },
+  investor: {
+    base: 4200,
+    max: 6800,
+    months: [4, 7],
+    docs: "High",
+    docsRu: "Высокая",
+    docsEs: "Alta",
+    step: "Investment review",
+    stepRu: "Разбор инвестиций",
+    stepEs: "Revisión de inversión",
+    ideal: ["investor"],
+    checklist: ["Passport copy", "Source of funds summary", "Property or investment context", "Police clearance", "Local advisor review"]
+  },
+  pensioner: {
+    base: 3200,
+    max: 5200,
+    months: [3, 6],
+    docs: "Income proof",
+    docsRu: "Доход",
+    docsEs: "Ingresos",
+    step: "Income check",
+    stepRu: "Проверка дохода",
+    stepEs: "Revisión de ingresos",
+    ideal: ["pensioner", "rentista"],
+    checklist: ["Passport copy", "Pension or passive income proof", "Bank statements", "Police clearance", "Civil status documents"]
+  },
+  family: {
+    base: 3800,
+    max: 6400,
+    months: [4, 7],
+    docs: "Family file",
+    docsRu: "Семейная",
+    docsEs: "Familiar",
+    step: "Family document audit",
+    stepRu: "Аудит семейных документов",
+    stepEs: "Auditoría familiar",
+    ideal: ["marriage", "standard", "investor"],
+    checklist: ["Passport copies for each applicant", "Marriage certificate if applicable", "Birth certificates for children", "Police clearance", "Apostille and translation review"]
+  },
+  permanent: {
+    base: 4500,
+    max: 7200,
+    months: [5, 9],
+    docs: "Long-term",
+    docsRu: "Долгосрочная",
+    docsEs: "Largo plazo",
+    step: "Status review",
+    stepRu: "Проверка статуса",
+    stepEs: "Revisión de estatus",
+    ideal: ["investor", "rentista", "pensioner"],
+    checklist: ["Current residency or eligibility basis", "Continuity documents", "Police clearance", "Income or investment proof", "Renewal and status history review"]
+  }
 };
 
 function formatMoney(value) {
@@ -2520,28 +2752,69 @@ function selectedText(select) {
   return select.options[select.selectedIndex].textContent.trim();
 }
 
+function getCalculatorState() {
+  if (!calculator) return null;
+  const profile = programProfiles[calculator.program.value];
+  const applicants = Number(calculator.applicants.value);
+  const docFactor = calculator.docs.value === "ready" ? 0 : calculator.docs.value === "partial" ? 650 : 1400;
+  const applicantFactor = Math.max(applicants - 1, 0) * 550;
+  const countryFactor = calculator.country.value === "russia" ? 350 : calculator.country.value === "other" ? 250 : 0;
+  const goalFactor = calculator.goal.value === "citizenship" || calculator.goal.value === "permanent" ? 500 : 0;
+  const timeAdd = calculator.docs.value === "ready" ? 0 : calculator.docs.value === "partial" ? 1 : 2;
+  const goalTime = calculator.goal.value === "citizenship" || calculator.goal.value === "permanent" ? 1 : 0;
+  const profileFit = profile.ideal.includes(calculator.profile.value);
+  const goalFit = calculator.goal.value === "realestate" ? calculator.program.value === "investor" : calculator.goal.value === "citizenship" ? calculator.program.value === "permanent" : true;
+  const fitKey = profileFit && goalFit ? "strong" : profileFit || goalFit ? "review" : "strategy";
+  return {
+    profile,
+    applicants,
+    fitKey,
+    costMin: profile.base + applicantFactor + docFactor + countryFactor + goalFactor,
+    costMax: profile.max + applicantFactor + docFactor + countryFactor + goalFactor,
+    monthsMin: profile.months[0] + timeAdd + goalTime,
+    monthsMax: profile.months[1] + timeAdd + goalTime,
+    checklist: profile.checklist
+  };
+}
+
+function fitLabel(fitKey, lang = document.documentElement.lang) {
+  const labels = {
+    strong: { en: "Strong fit", ru: "Сильное совпадение", es: "Encaje fuerte" },
+    review: { en: "Good fit after review", ru: "Подходит после проверки", es: "Buen encaje tras revisión" },
+    strategy: { en: "Needs strategy review", ru: "Нужен разбор стратегии", es: "Requiere revisión estratégica" }
+  };
+  return labels[fitKey][lang] || labels[fitKey].en;
+}
+
 function updateEstimateLink() {
   if (!calculator || !sendEstimate) return;
   const lang = document.documentElement.lang;
   const cost = document.getElementById("estimateCost").textContent;
   const time = document.getElementById("estimateTime").textContent;
+  const fit = document.getElementById("estimateFit").textContent;
+  const checklist = [...document.querySelectorAll("#estimateChecklist li")].map(item => "- " + item.textContent).join("\n");
   const intro = lang === "ru"
     ? "Здравствуйте! Хочу обсудить расчёт резиденции Доминиканской Республики."
     : lang === "es"
       ? "Hola. Me gustaría revisar esta estimación para residencia en República Dominicana."
       : "Hello. I would like to review this Dominican Republic residency estimate.";
   const labels = lang === "ru"
-    ? ["Программа", "Заявители", "Документы", "Стоимость", "Срок"]
+    ? ["Страна", "Цель", "Программа", "Профиль", "Заявители", "Документы", "Пригодность", "Стоимость", "Срок", "Список документов"]
     : lang === "es"
-      ? ["Programa", "Solicitantes", "Documentos", "Costo", "Plazo"]
-      : ["Program", "Applicants", "Documents", "Cost", "Timeline"];
+      ? ["País", "Objetivo", "Programa", "Perfil", "Solicitantes", "Documentos", "Encaje", "Costo", "Plazo", "Lista de documentos"]
+      : ["Country", "Goal", "Program", "Profile", "Applicants", "Documents", "Fit", "Cost", "Timeline", "Document checklist"];
   const message = [
     intro,
-    `${labels[0]}: ${selectedText(calculator.program)}`,
-    `${labels[1]}: ${selectedText(calculator.applicants)}`,
-    `${labels[2]}: ${selectedText(calculator.docs)}`,
-    `${labels[3]}: ${cost}`,
-    `${labels[4]}: ${time}`
+    `${labels[0]}: ${selectedText(calculator.country)}`,
+    `${labels[1]}: ${selectedText(calculator.goal)}`,
+    `${labels[2]}: ${selectedText(calculator.program)}`,
+    `${labels[3]}: ${selectedText(calculator.profile)}`,
+    `${labels[4]}: ${selectedText(calculator.applicants)}`,
+    `${labels[5]}: ${selectedText(calculator.docs)}`,
+    `${labels[6]}: ${fit}`,
+    `${labels[7]}: ${cost}`,
+    `${labels[8]}: ${time}`,
+    `${labels[9]}:\n${checklist}`
   ].join("\n");
   sendEstimate.href = "https://wa.me/18297200513?text=" + encodeURIComponent(message);
 }
@@ -2551,16 +2824,14 @@ function updateCalculator() {
   const lang = document.documentElement.lang;
   const isRu = lang === "ru";
   const isEs = lang === "es";
-  const profile = programProfiles[calculator.program.value];
-  const applicants = Number(calculator.applicants.value);
-  const docFactor = calculator.docs.value === "ready" ? 0 : calculator.docs.value === "partial" ? 650 : 1400;
-  const applicantFactor = Math.max(applicants - 1, 0) * 550;
-  const timeAdd = calculator.docs.value === "ready" ? 0 : calculator.docs.value === "partial" ? 1 : 2;
-
-  document.getElementById("estimateCost").textContent = formatMoney(profile.base + applicantFactor + docFactor) + "-" + formatMoney(profile.max + applicantFactor + docFactor);
-  document.getElementById("estimateTime").textContent = (profile.months[0] + timeAdd) + "-" + (profile.months[1] + timeAdd) + (isRu ? " мес." : isEs ? " meses" : " months");
+  const state = getCalculatorState();
+  const profile = state.profile;
+  document.getElementById("estimateFit").textContent = fitLabel(state.fitKey, lang);
+  document.getElementById("estimateCost").textContent = formatMoney(state.costMin) + "-" + formatMoney(state.costMax);
+  document.getElementById("estimateTime").textContent = state.monthsMin + "-" + state.monthsMax + (isRu ? " мес." : isEs ? " meses" : " months");
   document.getElementById("estimateDocs").textContent = isRu ? profile.docsRu : isEs ? profile.docsEs : profile.docs;
   document.getElementById("estimateStep").textContent = isRu ? profile.stepRu : isEs ? profile.stepEs : profile.step;
+  document.getElementById("estimateChecklist").innerHTML = state.checklist.map(item => `<li>${item}</li>`).join("");
   updateEstimateLink();
 }
 
@@ -2576,13 +2847,44 @@ function saveLeadBackup(payload) {
   localStorage.setItem(leadBackupKey, JSON.stringify(backups.slice(-20)));
 }
 
+function createCaseSnapshot(payload) {
+  const state = getCalculatorState();
+  const caseId = "CR-" + Date.now().toString(36).toUpperCase();
+  const checklist = state ? state.checklist : ["Passport copy", "Police clearance", "Document review"];
+  const snapshot = {
+    caseId,
+    route: payload.goal,
+    country: payload.country,
+    progress: payload.message ? 42 : 35,
+    status: "Initial review requested",
+    checklist,
+    createdAt: payload.submittedAt
+  };
+  localStorage.setItem("caribrus-current-case", JSON.stringify(snapshot));
+  return snapshot;
+}
+
+function renderCaseSnapshot(snapshot) {
+  const panel = document.getElementById("caseSnapshot");
+  if (!panel || !snapshot) return;
+  panel.classList.add("is-visible");
+  panel.style.setProperty("--case-progress", snapshot.progress + "%");
+  document.getElementById("caseRoute").textContent = "Route: " + snapshot.route;
+  document.getElementById("caseProgress").textContent = snapshot.progress + "% ready";
+  document.getElementById("caseProgressBar").style.width = snapshot.progress + "%";
+  document.getElementById("caseChecklist").innerHTML = snapshot.checklist.map(item => `<li>${item}</li>`).join("");
+  panel.querySelector("p").textContent = `Case ${snapshot.caseId}: ${snapshot.status}. We will confirm the route after document review.`;
+}
+
 function buildLeadMessage(payload) {
   return [
     "New CaribRus residency review request",
+    `Case ID: ${payload.caseId || "Pending"}`,
     `Name: ${payload.name}`,
     `Email: ${payload.email}`,
     `Country: ${payload.country}`,
     `Goal: ${payload.goal}`,
+    `Case progress: ${payload.caseProgress || "35"}%`,
     `Message: ${payload.message || "Not provided"}`
   ].join("\n");
 }
@@ -2599,6 +2901,12 @@ function withTimeout(promise, ms = 10000) {
 document.getElementById("leadForm").addEventListener("submit", async function(event) {
   event.preventDefault();
   const note = document.getElementById("formNote");
+  const snapshot = createCaseSnapshot({
+    country: this.country.value,
+    goal: this.goal.value,
+    message: this.message.value,
+    submittedAt: new Date().toISOString()
+  });
   const payload = {
     name: this.name.value,
     email: this.email.value,
@@ -2606,10 +2914,14 @@ document.getElementById("leadForm").addEventListener("submit", async function(ev
     goal: this.goal.value,
     message: this.message.value,
     source: "caribrus-home",
-    submittedAt: new Date().toISOString()
+    submittedAt: snapshot.createdAt,
+    caseId: snapshot.caseId,
+    caseProgress: snapshot.progress,
+    caseChecklist: snapshot.checklist.join("; ")
   };
 
   note.textContent = "Sending request...";
+  renderCaseSnapshot(snapshot);
 
   try {
     await withTimeout(fetch(endpoint, {
@@ -2628,6 +2940,15 @@ document.getElementById("leadForm").addEventListener("submit", async function(ev
     note.innerHTML = `Connection issue. Your request is saved in this browser.<br><a href="${whatsappUrl}" target="_blank" rel="noopener">Send via WhatsApp</a><a href="${emailUrl}">Email request</a>`;
   }
 });
+
+const savedCaseSnapshot = localStorage.getItem("caribrus-current-case");
+if (savedCaseSnapshot) {
+  try {
+    renderCaseSnapshot(JSON.parse(savedCaseSnapshot));
+  } catch (error) {
+    localStorage.removeItem("caribrus-current-case");
+  }
+}
 </script>
 </body>
 </html>
