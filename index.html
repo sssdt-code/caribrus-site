@@ -29,7 +29,7 @@
       "@id": "https://caribrus.com/#organization",
       "name": "CaribRus",
       "url": "https://caribrus.com/",
-      "email": "caribrus@list.ru",
+      "email": "info@caribrus.com",
       "telephone": "+18297200513",
       "logo": "https://caribrus.com/favicon.svg",
       "sameAs": [
@@ -2053,9 +2053,9 @@ textarea {
             <strong>Telegram</strong>
             <span>+1 829 720 0513</span>
           </a>
-          <a class="contact-method" href="mailto:caribrus@list.ru">
+          <a class="contact-method" href="mailto:info@caribrus.com">
             <strong>Email</strong>
-            <span>caribrus@list.ru</span>
+            <span>info@caribrus.com</span>
           </a>
         </div>
         <div class="map-placeholder">
@@ -2936,7 +2936,7 @@ document.getElementById("leadForm").addEventListener("submit", async function(ev
     saveLeadBackup(payload);
     const message = buildLeadMessage(payload);
     const whatsappUrl = "https://wa.me/18297200513?text=" + encodeURIComponent(message);
-    const emailUrl = "mailto:caribrus@list.ru?subject=" + encodeURIComponent("CaribRus residency review request") + "&body=" + encodeURIComponent(message);
+    const emailUrl = "mailto:info@caribrus.com?subject=" + encodeURIComponent("CaribRus residency review request") + "&body=" + encodeURIComponent(message);
     note.innerHTML = `Connection issue. Your request is saved in this browser.<br><a href="${whatsappUrl}" target="_blank" rel="noopener">Send via WhatsApp</a><a href="${emailUrl}">Email request</a>`;
   }
 });
