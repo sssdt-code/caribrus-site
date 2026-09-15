@@ -339,7 +339,7 @@ html[lang="es"] .nav {
 
 .section {
   scroll-margin-top: 92px;
-  padding: clamp(64px, 8vw, 112px) clamp(18px, 5vw, 72px);
+  padding: clamp(56px, 6vw, 88px) clamp(18px, 5vw, 72px);
 }
 
 .section-inner {
@@ -396,11 +396,16 @@ h2 {
   gap: 16px;
 }
 
+.service-summary-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 18px;
+}
+
 .service-row {
   display: grid;
-  grid-template-columns: 58px minmax(0, 1fr);
-  gap: 18px;
-  padding: 22px 0;
+  grid-template-columns: 38px minmax(0, 1fr);
+  gap: 10px;
+  padding: 14px 0;
   border-bottom: 1px solid var(--line);
 }
 
@@ -411,14 +416,14 @@ h2 {
 }
 
 .service-row h3 {
-  margin-bottom: 6px;
-  font-size: 22px;
+  margin-bottom: 0;
+  font-size: 18px;
 }
 
 .service-row p { color: var(--muted); }
 
 .service-cards {
-  margin-top: 54px;
+  margin-top: 36px;
 }
 
 .service-grid {
@@ -428,8 +433,8 @@ h2 {
 }
 
 .service-card {
-  min-height: 250px;
-  padding: 24px;
+  min-height: 220px;
+  padding: 21px;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: #fff;
@@ -438,7 +443,7 @@ h2 {
 
 .service-card .tag {
   display: inline-flex;
-  margin-bottom: 34px;
+  margin-bottom: 18px;
   color: var(--sea);
   font-size: 12px;
   font-weight: 850;
@@ -654,6 +659,7 @@ h2 {
 
 .portal-list {
   display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 10px;
   margin: 18px 0 0;
   padding: 0;
@@ -661,7 +667,7 @@ h2 {
 }
 
 .portal-list li {
-  padding: 12px 14px;
+  padding: 9px 11px;
   border-left: 4px solid var(--reef);
   background: #f7fbfb;
   font-weight: 700;
@@ -687,12 +693,12 @@ h2 {
 
 .portal-body {
   display: grid;
-  gap: 12px;
-  padding: 16px;
+  gap: 8px;
+  padding: 13px;
 }
 
 .portal-task {
-  padding: 14px;
+  padding: 10px 12px;
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.1);
 }
@@ -794,25 +800,20 @@ h2 {
 .timeline {
   position: relative;
   display: grid;
-  gap: 18px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
   counter-reset: step;
 }
 
 .timeline::before {
-  content: "";
-  position: absolute;
-  top: 30px;
-  bottom: 30px;
-  left: 25px;
-  width: 2px;
-  background: linear-gradient(180deg, var(--reef), var(--sea));
+  display: none;
 }
 
 .timeline-step {
   position: relative;
   display: grid;
-  grid-template-columns: 52px minmax(0, 1fr);
-  gap: 22px;
+  grid-template-columns: 1fr;
+  gap: 0;
   align-items: start;
 }
 
@@ -821,8 +822,9 @@ h2 {
   z-index: 1;
   display: grid;
   place-items: center;
-  width: 52px;
-  height: 52px;
+  width: 44px;
+  height: 44px;
+  margin: 0 0 -12px 18px;
   border-radius: 8px;
   color: #fff;
   background: var(--night);
@@ -831,8 +833,8 @@ h2 {
 }
 
 .timeline-card {
-  min-height: 144px;
-  padding: 24px;
+  min-height: 210px;
+  padding: 30px 20px 20px;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--paper);
@@ -870,8 +872,8 @@ h2 {
 }
 
 .scenario-card {
-  min-height: 300px;
-  padding: 24px;
+  min-height: 230px;
+  padding: 21px;
   border-radius: 8px;
   color: #fff;
   background: var(--night);
@@ -884,9 +886,9 @@ h2 {
 
 .scenario-card img {
   display: block;
-  width: calc(100% + 48px);
-  height: 138px;
-  margin: -24px -24px 18px;
+  width: calc(100% + 42px);
+  height: 112px;
+  margin: -21px -21px 16px;
   border-radius: 8px 8px 0 0;
   object-fit: cover;
   object-position: center 58%;
@@ -1413,6 +1415,7 @@ textarea {
 @media (max-width: 980px) {
   .nav { display: none; }
   .hero { min-height: 88vh; }
+  .timeline { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .hero-proof,
   .card-grid,
   .service-grid,
@@ -1529,9 +1532,17 @@ textarea {
   .service-row {
     grid-template-columns: 42px minmax(0, 1fr);
   }
+  .service-summary-grid,
+  .portal-list { grid-template-columns: 1fr; }
+  .timeline { grid-template-columns: 1fr; }
   .timeline-step {
     grid-template-columns: 42px minmax(0, 1fr);
     gap: 14px;
+  }
+  .timeline-marker { margin: 0; }
+  .timeline-card {
+    min-height: 0;
+    padding: 20px;
   }
   .timeline::before {
     left: 20px;
@@ -1560,12 +1571,9 @@ textarea {
   <nav class="nav" aria-label="Main navigation">
     <a href="#services">Services</a>
     <a href="#programs">Programs</a>
-    <a href="#verified-2026">2026 Guide</a>
     <a href="#updates">Updates</a>
     <a href="#platform">Calculator</a>
-    <a href="#clients">Clients</a>
-    <a href="#process">Process</a>
-    <a href="#faq">FAQ</a>
+    <a href="#contact">Contact</a>
   </nav>
   <div class="header-actions">
     <div class="language-switcher" aria-label="Language switcher">
@@ -1606,33 +1614,29 @@ textarea {
         <div class="section-kicker">What We Do</div>
         <h2>Residency is not just paperwork. It is a jurisdiction strategy.</h2>
         <p class="lead">We turn a vague idea of "moving to the Caribbean" into a clear plan: eligibility, documents, timing, family needs, real estate context, and the next legal steps with local professionals.</p>
-        <div class="stack">
+        <div class="stack service-summary-grid">
           <div class="service-row">
             <div class="service-num">01</div>
             <div>
               <h3>Residency Assessment</h3>
-              <p>We identify the most realistic route based on income, family situation, documents, timeline, and whether the goal is relocation, backup status, or eventual citizenship planning.</p>
             </div>
           </div>
           <div class="service-row">
             <div class="service-num">02</div>
             <div>
               <h3>Document & Application Support</h3>
-              <p>We coordinate the practical side of preparation, translation, local appointments, filing flow, and communication so the process stays organized.</p>
             </div>
           </div>
           <div class="service-row">
             <div class="service-num">03</div>
             <div>
               <h3>Relocation & Real Estate Context</h3>
-              <p>For clients considering a physical move or property purchase, we connect the residency plan with trusted local market guidance and partner agents.</p>
             </div>
           </div>
           <div class="service-row">
             <div class="service-num">04</div>
             <div>
               <h3>Long-Term Planning</h3>
-              <p>We help clients understand renewals, family inclusion, lifestyle setup, and questions to discuss with independent legal and tax advisors.</p>
             </div>
           </div>
         </div>
@@ -2088,49 +2092,24 @@ textarea {
           <div class="section-kicker">Client Scenarios</div>
           <h2>International cases we are built to handle.</h2>
         </div>
-        <p>Until real testimonials are collected and approved, these scenario cards communicate the kinds of clients CaribRus serves without inventing names, faces, or claims.</p>
       </div>
       <div class="scenario-grid">
         <article class="scenario-card">
-          <div class="rating" aria-label="Five-star service signal">★★★★★</div>
           <h3>US Entrepreneur</h3>
           <p>Needs a second jurisdiction, flexible Caribbean access, and a plan that does not require immediate relocation.</p>
-          <ul>
-            <li>Business owner profile</li>
-            <li>Family optionality</li>
-            <li>Plan B residency</li>
-          </ul>
         </article>
         <article class="scenario-card">
-          <div class="rating" aria-label="Five-star service signal">★★★★★</div>
           <h3>Canadian Retiree</h3>
           <p>Explores warmer lifestyle, longer stays, property options, and a calm residency process with practical support.</p>
-          <ul>
-            <li>Pension-income review</li>
-            <li>Retirement planning</li>
-            <li>Local setup context</li>
-          </ul>
         </article>
         <article class="scenario-card">
           <img src="dominican-family-residency.jpg" alt="Family planning residency in the Dominican Republic">
-          <div class="rating" aria-label="Five-star service signal">★★★★★</div>
           <h3>Russian-Speaking Family</h3>
           <p>Looks for a second legal base, family safety, document coordination, and a Russian-language guide through the process.</p>
-          <ul>
-            <li>Family documents</li>
-            <li>Relocation route</li>
-            <li>Bilingual support</li>
-          </ul>
         </article>
         <article class="scenario-card">
-          <div class="rating" aria-label="Five-star service signal">★★★★★</div>
           <h3>Property Buyer</h3>
           <p>Wants residency questions answered while evaluating Dominican Republic real estate and local living options.</p>
-          <ul>
-            <li>Buyer pre-screening</li>
-            <li>Agent collaboration</li>
-            <li>Residency plus lifestyle</li>
-          </ul>
         </article>
       </div>
     </div>
