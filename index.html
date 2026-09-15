@@ -53,7 +53,7 @@
       "image": "https://caribrus.com/dominican-pier-hero.jpg",
       "description": "Dominican Republic residency planning, document preparation, program comparison, timeline estimation, and local coordination for international clients.",
       "areaServed": ["United States", "Canada", "Europe", "Russia", "Dominican Republic"],
-      "serviceType": ["Residency visa planning", "Investor residency coordination", "Pensioner residency support", "Family residency planning", "Document preparation", "Real estate partner support"],
+      "serviceType": ["Residency visa planning", "Investor residency coordination", "Pensioner residency support", "Family residency planning", "Naturalization support", "Document preparation", "Real estate partner support"],
       "provider": { "@id": "https://caribrus.com/#organization" }
     }
   ]
@@ -912,6 +912,65 @@ h2 {
   font-weight: 650;
 }
 
+.verified-guide {
+  background: #f3f8f7;
+}
+
+.verified-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+  gap: 28px;
+  padding: clamp(28px, 5vw, 52px);
+  border: 1px solid rgba(26, 113, 104, 0.16);
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+
+.verified-panel .lead { margin-bottom: 22px; }
+
+.verified-date {
+  display: inline-flex;
+  margin-bottom: 16px;
+  padding: 7px 10px;
+  border-radius: 999px;
+  color: var(--sea-dark);
+  background: #e4f3f0;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+}
+
+.fee-grid { display: grid; gap: 12px; }
+
+.fee-card {
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+}
+
+.fee-card strong,
+.fee-card span { display: block; }
+
+.fee-card strong { margin-bottom: 5px; color: var(--ink); }
+
+.fee-card span {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.market-link {
+  display: inline-flex;
+  margin-top: 16px;
+  color: var(--sea-dark);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.market-link:hover { text-decoration: underline; }
+
 .faq {
   background: #fff;
 }
@@ -1286,6 +1345,7 @@ textarea {
   .section-head,
   .split,
   .calculator-grid,
+  .verified-panel,
   .portal-grid,
   .partner-panel,
   .contact-grid,
@@ -1416,6 +1476,7 @@ textarea {
   <nav class="nav" aria-label="Main navigation">
     <a href="#services">Services</a>
     <a href="#programs">Programs</a>
+    <a href="#verified-2026">2026 Guide</a>
     <a href="#platform">Calculator</a>
     <a href="#clients">Clients</a>
     <a href="#process">Process</a>
@@ -1621,6 +1682,36 @@ textarea {
     </div>
   </section>
 
+  <section class="section verified-guide" id="verified-2026">
+    <div class="section-inner verified-panel">
+      <div>
+        <div class="section-kicker">Official 2026 Check</div>
+        <div class="verified-date">Verified September 14, 2026</div>
+        <h2>Government fees and CaribRus professional fees are separate.</h2>
+        <p class="lead">Official charges depend on the residency category and may change. CaribRus quotes advisory, document coordination, and case support separately so clients can see what is paid to the government and what is paid for professional work.</p>
+        <a class="button primary" href="official-fees-2026.html">See verified fees and timelines</a>
+      </div>
+      <div class="fee-grid">
+        <div class="fee-card">
+          <strong>Ordinary temporary residency (RT-9)</strong>
+          <span>DGM file deposit: RD$14,000. Medical exam: RD$6,300 for an adult or RD$4,200 for a child. Published processing time: 90 working days.</span>
+        </div>
+        <div class="fee-card">
+          <strong>Temporary residency renewal</strong>
+          <span>DGM file deposit: RD$7,000. Published processing time: 30 working days. DGM recommends applying 45 days before expiry.</span>
+        </div>
+        <div class="fee-card">
+          <strong>Naturalization</strong>
+          <span>MIP introduced a new digital procedure in 2026. The applicable portal charge and required documents must be confirmed for the applicant's exact route before filing.</span>
+        </div>
+        <div class="fee-card">
+          <strong>CaribRus professional support</strong>
+          <span>Individual residency cases: typically US$1,500-US$3,000. Family files: typically US$3,500-US$5,000. Naturalization support: typically US$2,000-US$3,500.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="section platform" id="platform">
     <div class="section-inner">
       <div class="section-head">
@@ -1662,6 +1753,7 @@ textarea {
               <option value="pensioner">Pensioner Residency</option>
               <option value="family">Family Residency</option>
               <option value="permanent">Permanent Residency</option>
+              <option value="naturalization">Naturalization Support</option>
             </select>
           </div>
           <div class="field">
@@ -1721,7 +1813,7 @@ textarea {
             <span>Likely document checklist</span>
             <ul id="estimateChecklist"></ul>
           </div>
-          <p class="result-note">This calculator is intentionally conservative. It helps the client understand scale before a proper document review.</p>
+          <p class="result-note">Professional-fee estimate only. Government charges, translations, apostilles, insurance, medical exams, and third-party costs are separate.</p>
           <a class="button estimate-whatsapp" id="sendEstimate" href="https://wa.me/18297200513" target="_blank" rel="noopener">Send My Estimate</a>
         </div>
       </div>
@@ -1777,6 +1869,7 @@ textarea {
           <div class="card-body">
             <h3>United States</h3>
             <p>For business owners, remote professionals, families, and retirees who want a Caribbean base outside the US system.</p>
+            <a class="market-link" href="usa-2026.html">Explore the US client pathway →</a>
           </div>
         </article>
         <article class="card audience-card">
@@ -1784,6 +1877,7 @@ textarea {
           <div class="card-body">
             <h3>Canada</h3>
             <p>For clients exploring warmer lifestyle options, retirement planning, flexible stays, and long-term family mobility.</p>
+            <a class="market-link" href="canada-2026.html">Explore the Canadian pathway →</a>
           </div>
         </article>
         <article class="card audience-card">
@@ -2086,6 +2180,44 @@ textarea {
           </select>
         </div>
         <div class="field">
+          <label for="citizenship">Citizenship</label>
+          <input id="citizenship" name="citizenship" required>
+        </div>
+        <div class="field">
+          <label for="familySize">Number of applicants</label>
+          <select id="familySize" name="familySize" required>
+            <option value="">Select one</option>
+            <option value="1">1 applicant</option>
+            <option value="2">2 applicants</option>
+            <option value="3">3 applicants</option>
+            <option value="4">4 applicants</option>
+            <option value="5+">5+ applicants</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="incomeSource">Main income source</label>
+          <select id="incomeSource" name="incomeSource" required>
+            <option value="">Select one</option>
+            <option>Employment / professional income</option>
+            <option>Business income</option>
+            <option>Pension</option>
+            <option>Rental / passive income</option>
+            <option>Investment capital</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="timeline">Preferred timeline</label>
+          <select id="timeline" name="timeline" required>
+            <option value="">Select one</option>
+            <option>Within 30 days</option>
+            <option>1-3 months</option>
+            <option>3-6 months</option>
+            <option>More than 6 months</option>
+            <option>Researching options</option>
+          </select>
+        </div>
+        <div class="field">
           <label for="goal">Main goal</label>
           <select id="goal" name="goal" required>
             <option value="">Select one</option>
@@ -2145,6 +2277,9 @@ textarea {
           <li><a href="#platform">Calculator</a></li>
           <li><a href="#process">Process</a></li>
           <li><a href="#faq">FAQ</a></li>
+          <li><a href="official-fees-2026.html">2026 Fees & Timelines</a></li>
+          <li><a href="usa-2026.html">For US Clients</a></li>
+          <li><a href="canada-2026.html">For Canadian Clients</a></li>
         </ul>
       </div>
       <div>
@@ -2430,7 +2565,42 @@ const ruText = {
   "Terms": "Условия",
   "Legal Disclaimer": "Правовая оговорка",
   "Russian": "Русский",
-  "English": "English"
+  "English": "English",
+  "2026 Guide": "Данные 2026",
+  "Official 2026 Check": "Официальная проверка 2026",
+  "Verified September 14, 2026": "Проверено 14 сентября 2026 года",
+  "Government fees and CaribRus professional fees are separate.": "Государственные сборы и стоимость услуг CaribRus считаются отдельно.",
+  "Official charges depend on the residency category and may change. CaribRus quotes advisory, document coordination, and case support separately so clients can see what is paid to the government and what is paid for professional work.": "Официальные платежи зависят от категории резиденции и могут меняться. CaribRus отдельно указывает стоимость консультаций, координации документов и сопровождения, чтобы клиент видел платежи государству и стоимость профессиональной работы.",
+  "See verified fees and timelines": "Посмотреть проверенные сборы и сроки",
+  "Ordinary temporary residency (RT-9)": "Обычная временная резиденция (RT-9)",
+  "DGM file deposit: RD$14,000. Medical exam: RD$6,300 for an adult or RD$4,200 for a child. Published processing time: 90 working days.": "Подача дела в DGM: RD$14 000. Медицинское обследование: RD$6 300 для взрослого или RD$4 200 для ребёнка. Опубликованный срок: 90 рабочих дней.",
+  "Temporary residency renewal": "Продление временной резиденции",
+  "DGM file deposit: RD$7,000. Published processing time: 30 working days. DGM recommends applying 45 days before expiry.": "Подача на продление в DGM: RD$7 000. Опубликованный срок: 30 рабочих дней. DGM рекомендует подаваться за 45 дней до окончания карты.",
+  "Naturalization": "Натурализация",
+  "MIP introduced a new digital procedure in 2026. The applicable portal charge and required documents must be confirmed for the applicant's exact route before filing.": "В 2026 году MIP ввело новую цифровую процедуру. Платёж в портале и комплект документов необходимо подтверждать для конкретного основания до подачи.",
+  "CaribRus professional support": "Профессиональное сопровождение CaribRus",
+  "Individual residency cases: typically US$1,500-US$3,000. Family files: typically US$3,500-US$5,000. Naturalization support: typically US$2,000-US$3,500.": "Индивидуальная резиденция: обычно US$1 500-US$3 000. Семейное дело: обычно US$3 500-US$5 000. Сопровождение натурализации: обычно US$2 000-US$3 500.",
+  "Naturalization Support": "Сопровождение натурализации",
+  "Professional-fee estimate only. Government charges, translations, apostilles, insurance, medical exams, and third-party costs are separate.": "Расчёт включает только профессиональное сопровождение. Госпошлины, переводы, апостили, страховка, медицинское обследование и услуги третьих лиц оплачиваются отдельно.",
+  "Explore the US client pathway →": "Маршрут для клиентов из США →",
+  "Explore the Canadian pathway →": "Маршрут для клиентов из Канады →",
+  "Citizenship": "Гражданство",
+  "Number of applicants": "Количество заявителей",
+  "Main income source": "Основной источник дохода",
+  "Employment / professional income": "Работа / профессиональный доход",
+  "Business income": "Доход от бизнеса",
+  "Pension": "Пенсия",
+  "Rental / passive income": "Арендный / пассивный доход",
+  "Investment capital": "Инвестиционный капитал",
+  "Preferred timeline": "Желаемый срок",
+  "Within 30 days": "В течение 30 дней",
+  "1-3 months": "1-3 месяца",
+  "3-6 months": "3-6 месяцев",
+  "More than 6 months": "Более 6 месяцев",
+  "Researching options": "Изучаю варианты",
+  "2026 Fees & Timelines": "Сборы и сроки 2026",
+  "For US Clients": "Для клиентов из США",
+  "For Canadian Clients": "Для клиентов из Канады"
 };
 
 const ruPlaceholders = {
@@ -2597,7 +2767,42 @@ const esText = {
   "Terms": "Términos",
   "Legal Disclaimer": "Aviso legal",
   "Russian": "Ruso",
-  "English": "Inglés"
+  "English": "Inglés",
+  "2026 Guide": "Guía 2026",
+  "Official 2026 Check": "Verificación oficial 2026",
+  "Verified September 14, 2026": "Verificado el 14 de septiembre de 2026",
+  "Government fees and CaribRus professional fees are separate.": "Las tasas gubernamentales y los honorarios de CaribRus se calculan por separado.",
+  "Official charges depend on the residency category and may change. CaribRus quotes advisory, document coordination, and case support separately so clients can see what is paid to the government and what is paid for professional work.": "Los cargos oficiales dependen de la categoría de residencia y pueden cambiar. CaribRus cotiza por separado la asesoría, la coordinación documental y el acompañamiento para distinguir los pagos al Gobierno de los honorarios profesionales.",
+  "See verified fees and timelines": "Ver tasas y plazos verificados",
+  "Ordinary temporary residency (RT-9)": "Residencia temporal ordinaria (RT-9)",
+  "DGM file deposit: RD$14,000. Medical exam: RD$6,300 for an adult or RD$4,200 for a child. Published processing time: 90 working days.": "Depósito del expediente en DGM: RD$14,000. Examen médico: RD$6,300 para adulto o RD$4,200 para menor. Plazo publicado: 90 días laborables.",
+  "Temporary residency renewal": "Renovación de residencia temporal",
+  "DGM file deposit: RD$7,000. Published processing time: 30 working days. DGM recommends applying 45 days before expiry.": "Depósito en DGM: RD$7,000. Plazo publicado: 30 días laborables. DGM recomienda solicitar 45 días antes del vencimiento.",
+  "Naturalization": "Naturalización",
+  "MIP introduced a new digital procedure in 2026. The applicable portal charge and required documents must be confirmed for the applicant's exact route before filing.": "MIP introdujo un nuevo procedimiento digital en 2026. El cargo del portal y los documentos deben confirmarse para la vía exacta del solicitante antes de presentar.",
+  "CaribRus professional support": "Acompañamiento profesional de CaribRus",
+  "Individual residency cases: typically US$1,500-US$3,000. Family files: typically US$3,500-US$5,000. Naturalization support: typically US$2,000-US$3,500.": "Residencia individual: normalmente US$1,500-US$3,000. Expedientes familiares: normalmente US$3,500-US$5,000. Naturalización: normalmente US$2,000-US$3,500.",
+  "Naturalization Support": "Acompañamiento de naturalización",
+  "Professional-fee estimate only. Government charges, translations, apostilles, insurance, medical exams, and third-party costs are separate.": "Estimación exclusiva de honorarios profesionales. Tasas gubernamentales, traducciones, apostillas, seguro, exámenes médicos y costos de terceros se pagan por separado.",
+  "Explore the US client pathway →": "Ver la ruta para clientes de EE. UU. →",
+  "Explore the Canadian pathway →": "Ver la ruta para clientes de Canadá →",
+  "Citizenship": "Ciudadanía",
+  "Number of applicants": "Número de solicitantes",
+  "Main income source": "Fuente principal de ingresos",
+  "Employment / professional income": "Empleo / ingresos profesionales",
+  "Business income": "Ingresos empresariales",
+  "Pension": "Pensión",
+  "Rental / passive income": "Alquiler / ingresos pasivos",
+  "Investment capital": "Capital de inversión",
+  "Preferred timeline": "Plazo preferido",
+  "Within 30 days": "Dentro de 30 días",
+  "1-3 months": "1-3 meses",
+  "3-6 months": "3-6 meses",
+  "More than 6 months": "Más de 6 meses",
+  "Researching options": "Investigando opciones",
+  "2026 Fees & Timelines": "Tasas y plazos 2026",
+  "For US Clients": "Para clientes de EE. UU.",
+  "For Canadian Clients": "Para clientes de Canadá"
 };
 
 const esPlaceholders = {
@@ -2678,8 +2883,8 @@ const calculator = document.getElementById("residencyCalculator");
 const sendEstimate = document.getElementById("sendEstimate");
 const programProfiles = {
   general: {
-    base: 1900,
-    max: 4200,
+    base: 1500,
+    max: 3000,
     months: [3, 5],
     docs: "Standard",
     docsRu: "Стандартная",
@@ -2691,8 +2896,8 @@ const programProfiles = {
     checklist: ["Passport copy", "Birth certificate", "Police clearance", "Proof of address", "Document translation review"]
   },
   investor: {
-    base: 4200,
-    max: 6800,
+    base: 1500,
+    max: 3000,
     months: [4, 7],
     docs: "High",
     docsRu: "Высокая",
@@ -2704,8 +2909,8 @@ const programProfiles = {
     checklist: ["Passport copy", "Source of funds summary", "Property or investment context", "Police clearance", "Local advisor review"]
   },
   pensioner: {
-    base: 3200,
-    max: 5200,
+    base: 1500,
+    max: 3000,
     months: [3, 6],
     docs: "Income proof",
     docsRu: "Доход",
@@ -2717,8 +2922,8 @@ const programProfiles = {
     checklist: ["Passport copy", "Pension or passive income proof", "Bank statements", "Police clearance", "Civil status documents"]
   },
   family: {
-    base: 3800,
-    max: 6400,
+    base: 3500,
+    max: 5000,
     months: [4, 7],
     docs: "Family file",
     docsRu: "Семейная",
@@ -2730,9 +2935,9 @@ const programProfiles = {
     checklist: ["Passport copies for each applicant", "Marriage certificate if applicable", "Birth certificates for children", "Police clearance", "Apostille and translation review"]
   },
   permanent: {
-    base: 4500,
-    max: 7200,
-    months: [5, 9],
+    base: 2000,
+    max: 3500,
+    months: [3, 6],
     docs: "Long-term",
     docsRu: "Долгосрочная",
     docsEs: "Largo plazo",
@@ -2741,6 +2946,19 @@ const programProfiles = {
     stepEs: "Revisión de estatus",
     ideal: ["investor", "rentista", "pensioner"],
     checklist: ["Current residency or eligibility basis", "Continuity documents", "Police clearance", "Income or investment proof", "Renewal and status history review"]
+  },
+  naturalization: {
+    base: 2000,
+    max: 3500,
+    months: [8, 18],
+    docs: "High",
+    docsRu: "Высокая",
+    docsEs: "Alta",
+    step: "Eligibility audit",
+    stepRu: "Проверка права на подачу",
+    stepEs: "Revisión de elegibilidad",
+    ideal: ["standard", "investor", "rentista", "pensioner", "marriage"],
+    checklist: ["Current residency and status history", "Absence and travel history", "Birth and civil-status documents", "Police clearance", "Naturalization route and portal review"]
   }
 };
 
@@ -2757,13 +2975,13 @@ function getCalculatorState() {
   const profile = programProfiles[calculator.program.value];
   const applicants = Number(calculator.applicants.value);
   const docFactor = calculator.docs.value === "ready" ? 0 : calculator.docs.value === "partial" ? 650 : 1400;
-  const applicantFactor = Math.max(applicants - 1, 0) * 550;
+  const applicantFactor = calculator.program.value === "family" ? 0 : Math.max(applicants - 1, 0) * 550;
   const countryFactor = calculator.country.value === "russia" ? 350 : calculator.country.value === "other" ? 250 : 0;
   const goalFactor = calculator.goal.value === "citizenship" || calculator.goal.value === "permanent" ? 500 : 0;
   const timeAdd = calculator.docs.value === "ready" ? 0 : calculator.docs.value === "partial" ? 1 : 2;
   const goalTime = calculator.goal.value === "citizenship" || calculator.goal.value === "permanent" ? 1 : 0;
   const profileFit = profile.ideal.includes(calculator.profile.value);
-  const goalFit = calculator.goal.value === "realestate" ? calculator.program.value === "investor" : calculator.goal.value === "citizenship" ? calculator.program.value === "permanent" : true;
+  const goalFit = calculator.goal.value === "realestate" ? calculator.program.value === "investor" : calculator.goal.value === "citizenship" ? calculator.program.value === "naturalization" : true;
   const fitKey = profileFit && goalFit ? "strong" : profileFit || goalFit ? "review" : "strategy";
   return {
     profile,
@@ -2883,6 +3101,10 @@ function buildLeadMessage(payload) {
     `Name: ${payload.name}`,
     `Email: ${payload.email}`,
     `Country: ${payload.country}`,
+    `Citizenship: ${payload.citizenship}`,
+    `Applicants: ${payload.familySize}`,
+    `Income source: ${payload.incomeSource}`,
+    `Preferred timeline: ${payload.timeline}`,
     `Goal: ${payload.goal}`,
     `Case progress: ${payload.caseProgress || "35"}%`,
     `Message: ${payload.message || "Not provided"}`
@@ -2911,6 +3133,10 @@ document.getElementById("leadForm").addEventListener("submit", async function(ev
     name: this.name.value,
     email: this.email.value,
     country: this.country.value,
+    citizenship: this.citizenship.value,
+    familySize: this.familySize.value,
+    incomeSource: this.incomeSource.value,
+    timeline: this.timeline.value,
     goal: this.goal.value,
     message: this.message.value,
     source: "caribrus-home",
